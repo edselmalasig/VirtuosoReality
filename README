@@ -46,9 +46,9 @@
 //          (STK) Perry R. Cook (prc@cs.princeton.edu)
 //          (libsndfile) Erik de Castro Lopo
 //          (ImGUI) Ocornut
-// date: 11.28.2003 - initial version
-//       spring 2015 - updated for OSX Yosemite
-//ƒ
+// date:    Spring 2017 - updated for macOS
+//	    Linux and Windows build files will be added soon
+//
 // usage: (type 'h' while running or see list of command line arguments)
 //-----------------------------------------------------------------------------
 
