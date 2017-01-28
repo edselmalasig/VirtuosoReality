@@ -1,0 +1,8 @@
+/Users/edselmalasig/Desktop/Virtuous_Reality/lib/portaudio/build/CMakeFiles/edit_cache.dir
+/Users/edselmalasig/Desktop/Virtuous_Reality/lib/portaudio/build/CMakeFiles/rebuild_cache.dir
+/Users/edselmalasig/Desktop/Virtuous_Reality/lib/portaudio/build/CMakeFiles/list_install_components.dir
+/Users/edselmalasig/Desktop/Virtuous_Reality/lib/portaudio/build/CMakeFiles/install.dir
+/Users/edselmalasig/Desktop/Virtuous_Reality/lib/portaudio/build/CMakeFiles/install/strip.dir
+/Users/edselmalasig/Desktop/Virtuous_Reality/lib/portaudio/build/CMakeFiles/portaudio.dir
+/Users/edselmalasig/Desktop/Virtuous_Reality/lib/portaudio/build/CMakeFiles/install/local.dir
+/Users/edselmalasig/Desktop/Virtuous_Reality/lib/portaudio/build/CMakeFiles/portaudio_static.dir
