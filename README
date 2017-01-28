@@ -1,23 +1,54 @@
+/*----------------------------------------------------------------------------
+ Virtuoso Reality - Virtual Reality real-time audio visualization tool
+ 
+ Copyright (c) 2016 Edsel Malasig
+ http://virtuosoreality.xdlogic.com
+ 
+ Backend - Virtuoso Reality : MARSYAS : PORTAUDIO : libaudiodecoder
+ Copyright (c) 2004 Ge Wang, Perry R. Cook, Ananya Misra.
+ All rights reserved.
+ http://www.gewang.com/
+ 
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+ U.S.A. 
 
-sndpeek: a real-time audio visualization tool (animated, 3D)
+ -----------------------------------------------------------------------------*/
 
-sndpeek homepage:
-    http://www.gewang.com/software/sndpeek/
-
----
-
-who it is for: audio/multimedia researchers, developers, composers,
-and performers
-
-supported platforms:
-  - MacOS X (CoreAudio)
-  - Linux (ALSA/OSS/Jack)
-  - Windows/Cygwin (DirectSound)
-
-authors:
-  Ge Wang (gewang@cs.princeton.edu)
-  Perry R. Cook (prc@cs.princeton.edu)
-  Ananya Misra (amisra@cs.princeton.edu)
-
----
+//-----------------------------------------------------------------------------
+// name: Virtuoso_Reality.cpp
+// desc: small real-time spectrum visualizer, originally implemented
+//       by Ge Wang for the memex project and to entertain small children
+//       at parties.
+//
+// authors:
+//          Edsel Malasig (http://www.xdlogic.com)
+//			Ge Wang (http://www.gewang.com/)
+//          Perry R. Cook (prc@cs.princeton.edu)
+//          Ananya Misra (amisra@cs.princeton.edu)
+// thanks to:
+//          Yilei Shao, Qin Lv, Tom Briggs
+// library:
+//          (PortAudio) www.portaudio.com
+//          (FFT) CARL CMusic Distribution
+//          (Marsyas) George Tzanetakis (gtzan@cs.princeton.edu)
+//          (STK) Perry R. Cook (prc@cs.princeton.edu)
+//          (libsndfile) Erik de Castro Lopo
+//          (ImGUI) Ocornut
+// date: 11.28.2003 - initial version
+//       spring 2015 - updated for OSX Yosemite
+//ƒ
+// usage: (type 'h' while running or see list of command line arguments)
+//-----------------------------------------------------------------------------
 
