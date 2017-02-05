@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{22ED2CE6-9696-34C8-8991-717B6C3746D1}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>portaudio_static</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\bin\Win32\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">portaudio_static.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">portaudio_static_x86</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\bin\Win32\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">portaudio_static.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">portaudio_static_x86</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\bin\Win32\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">portaudio_static.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">portaudio_static_x86</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\bin\Win32\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">portaudio_static.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">portaudio_static_x86</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeCCompiler.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\FindASIOSDK.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\FindDXSDK.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\template_portaudio.def;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\options_cmake.h.in;C:\Program Files\CMake\share\cmake-3.6\Modules\TestBigEndian.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeCCompiler.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\FindASIOSDK.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\FindDXSDK.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\template_portaudio.def;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\options_cmake.h.in;C:\Program Files\CMake\share\cmake-3.6\Modules\TestBigEndian.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeCCompiler.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\FindASIOSDK.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\FindDXSDK.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\template_portaudio.def;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\options_cmake.h.in;C:\Program Files\CMake\share\cmake-3.6\Modules\TestBigEndian.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeCCompiler.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\3.6.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\FindASIOSDK.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\FindDXSDK.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\template_portaudio.def;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\cmake_support\options_cmake.h.in;C:\Program Files\CMake\share\cmake-3.6\Modules\TestBigEndian.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_coinitialize.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_wdmks_utils.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_x86_plain_converters.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\options_cmake.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include\portaudio.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include\pa_win_wmme.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include\pa_win_wdmks.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_allocation.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_converters.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_cpuload.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_debugprint.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_dither.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_endianness.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_hostapi.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_memorybarrier.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_process.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_ringbuffer.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_stream.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_trace.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_types.h" />
+    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_util.h" />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_allocation.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_converters.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_cpuload.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_debugprint.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_dither.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_front.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_process.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_ringbuffer.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_stream.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_trace.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\hostapi\skeleton\pa_hostapi_skeleton.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_hostapis.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_util.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_waveformat.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_wdmks_utils.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_coinitialize.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_x86_plain_converters.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\hostapi\wmme\pa_win_wmme.c"  />
+    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\hostapi\wdmks\pa_win_wdmks.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/build/ZERO_CHECK.vcxproj">
+      <Project>AEFFDBB6-0E7C-3C2A-9DAB-2544110F6A78</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
