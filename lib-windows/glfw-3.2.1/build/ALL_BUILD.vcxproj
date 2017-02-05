@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{FF3AB21F-57E1-3BBB-889D-A6D41D4615C1}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw_config.h.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw3.pc.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\cmake_uninstall.cmake.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw_config.h.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw3.pc.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\cmake_uninstall.cmake.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw_config.h.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw3.pc.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\cmake_uninstall.cmake.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw_config.h.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\glfw3.pc.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\cmake_uninstall.cmake.in;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/ZERO_CHECK.vcxproj">
+      <Project>9CF4AD01-B1F2-3E2B-9C4B-8C2295A4D271</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/examples/boing.vcxproj">
+      <Project>64F2E513-E9F5-357C-8A74-3FD7D60858CE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/clipboard.vcxproj">
+      <Project>7B309474-FB6C-32AA-8ABB-C1018E461FB4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/cursor.vcxproj">
+      <Project>6F4E1803-F671-3A0C-9F88-88E6F234609B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/empty.vcxproj">
+      <Project>054C7111-E19A-31D6-941E-CD1326E5760D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/events.vcxproj">
+      <Project>D10F726A-E512-3A76-8F2A-114F11BAAA57</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/gamma.vcxproj">
+      <Project>CAC34BDB-FD29-37FB-9544-9F33D549F1D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/examples/gears.vcxproj">
+      <Project>6BCCFC3B-14A4-3BFA-8B00-E8A7F4B91CE9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/glfw.vcxproj">
+      <Project>5E02F8DB-5233-3BF3-BEF9-334884BBDAA5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/glfwinfo.vcxproj">
+      <Project>03E696A8-9B37-3BF6-BD04-D4940DC756E1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/examples/heightmap.vcxproj">
+      <Project>8010BDDA-7DFE-35BD-B6A7-9BE31F6DAD47</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/icon.vcxproj">
+      <Project>EF091946-8315-3844-8867-DAF43EF995D1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/iconify.vcxproj">
+      <Project>5AEE1758-DC1E-3B07-B8C6-B5985E9FD4B8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/joysticks.vcxproj">
+      <Project>9090D4C6-FDA6-305F-8A72-952A8397EAF4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/monitors.vcxproj">
+      <Project>12FEEDF6-722F-36FE-A9A6-0921550ACDF3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/msaa.vcxproj">
+      <Project>6375093E-A2EB-34AF-994F-D8E0D2FC57ED</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/examples/particles.vcxproj">
+      <Project>4A45E5C4-4C35-3600-BB57-F6CF812FE8E7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/reopen.vcxproj">
+      <Project>32CCBF3D-E202-33D1-BB83-31158498C1D1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/sharing.vcxproj">
+      <Project>1D1024CC-7C6A-322A-A8ED-F9C5BC75672C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/examples/simple.vcxproj">
+      <Project>8C82D521-8EF2-3953-915B-626575D4A206</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/examples/splitview.vcxproj">
+      <Project>1B944106-276C-3684-B61A-84F0771D70B6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/tearing.vcxproj">
+      <Project>11F7CF61-D989-335B-AD29-E7594E8E87B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/threads.vcxproj">
+      <Project>311F9F0D-8A14-372A-BE96-C682019C1B66</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/timeout.vcxproj">
+      <Project>6AE1B55F-39A0-309B-99D5-FAF46CFC8633</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/title.vcxproj">
+      <Project>57A50C77-0206-3C03-9F12-F068DD98A05D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/examples/wave.vcxproj">
+      <Project>3BA805CD-AD2C-3495-9631-1EBD9508A88E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/tests/windows.vcxproj">
+      <Project>E19D0DBF-0CA2-32EA-9F2F-7512BE68553E</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

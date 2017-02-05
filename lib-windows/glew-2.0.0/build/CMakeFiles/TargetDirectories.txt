@@ -1,0 +1,7 @@
+C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glew-2.0.0/build/CMakeFiles/glew.dir
+C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glew-2.0.0/build/CMakeFiles/glew_s.dir
+C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glew-2.0.0/build/CMakeFiles/INSTALL.dir
+C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glew-2.0.0/build/CMakeFiles/glewinfo.dir
+C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glew-2.0.0/build/CMakeFiles/visualinfo.dir
+C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glew-2.0.0/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glew-2.0.0/build/CMakeFiles/ZERO_CHECK.dir

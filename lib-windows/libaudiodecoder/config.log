@@ -1,0 +1,192 @@
+file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\libaudiodecoder\src\SConscript,line 79:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for C library C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\Mf_vista.lib... 
+.sconf_temp\conftest_0.c <-
+  |
+  |
+  |
+  |int
+  |main() {
+  |  
+  |return 0;
+  |}
+  |
+cl /Fo.sconf_temp\conftest_0.obj /c .sconf_temp\conftest_0.c /nologo /Isrc /Iinclude "/IC:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include"
+conftest_0.c
+link /nologo /OUT:.sconf_temp\conftest_0.exe "/LIBPATH:C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib" "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\Mf_vista.lib" .sconf_temp\conftest_0.obj
+LIBCMT.lib(gs_support.obj) : error LNK2019: unresolved external symbol __imp_QueryPerformanceCounter referenced in function __security_init_cookie
+LIBCMT.lib(gs_support.obj) : error LNK2019: unresolved external symbol __imp_GetCurrentProcessId referenced in function __security_init_cookie
+LIBCMT.lib(gs_support.obj) : error LNK2019: unresolved external symbol __imp_GetCurrentThreadId referenced in function __security_init_cookie
+libucrt.lib(per_thread_data.obj) : error LNK2001: unresolved external symbol __imp_GetCurrentThreadId
+LIBCMT.lib(gs_support.obj) : error LNK2019: unresolved external symbol __imp_GetSystemTimeAsFileTime referenced in function __security_init_cookie
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_GetSystemTimeAsFileTime
+LIBCMT.lib(tncleanup.obj) : error LNK2019: unresolved external symbol __imp_InitializeSListHead referenced in function "void __cdecl __scrt_initialize_type_info(void)" (?__scrt_initialize_type_info@@YAXXZ)
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol __imp_RtlCaptureContext referenced in function __scrt_fastfail
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol __imp_RtlCaptureContext
+LIBCMT.lib(gs_report.obj) : error LNK2001: unresolved external symbol __imp_RtlCaptureContext
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol __imp_RtlLookupFunctionEntry referenced in function __scrt_fastfail
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol __imp_RtlLookupFunctionEntry
+LIBCMT.lib(gs_report.obj) : error LNK2001: unresolved external symbol __imp_RtlLookupFunctionEntry
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol __imp_RtlVirtualUnwind referenced in function __scrt_fastfail
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol __imp_RtlVirtualUnwind
+LIBCMT.lib(gs_report.obj) : error LNK2001: unresolved external symbol __imp_RtlVirtualUnwind
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol __imp_IsDebuggerPresent referenced in function __scrt_fastfail
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol __imp_IsDebuggerPresent
+libucrt.lib(crtmbox.obj) : error LNK2001: unresolved external symbol __imp_IsDebuggerPresent
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol __imp_UnhandledExceptionFilter referenced in function __scrt_fastfail
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol __imp_UnhandledExceptionFilter
+LIBCMT.lib(gs_report.obj) : error LNK2001: unresolved external symbol __imp_UnhandledExceptionFilter
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol __imp_SetUnhandledExceptionFilter referenced in function __scrt_fastfail
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol __imp_SetUnhandledExceptionFilter
+LIBCMT.lib(gs_report.obj) : error LNK2001: unresolved external symbol __imp_SetUnhandledExceptionFilter
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol __imp_GetStartupInfoW referenced in function __scrt_get_show_window_mode
+libucrt.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_GetStartupInfoW
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol IsProcessorFeaturePresent referenced in function __scrt_fastfail
+libucrt.lib(abort.obj) : error LNK2001: unresolved external symbol IsProcessorFeaturePresent
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol IsProcessorFeaturePresent
+LIBCMT.lib(gs_report.obj) : error LNK2001: unresolved external symbol IsProcessorFeaturePresent
+LIBCMT.lib(utility_desktop.obj) : error LNK2019: unresolved external symbol __imp_GetModuleHandleW referenced in function __scrt_is_managed_app
+libucrt.lib(exit.obj) : error LNK2001: unresolved external symbol __imp_GetModuleHandleW
+libucrt.lib(free_base.obj) : error LNK2001: unresolved external symbol __imp_GetModuleHandleW
+libvcruntime.lib(_chandler_.obj) : error LNK2019: unresolved external symbol __imp_RtlUnwindEx referenced in function __C_specific_handler
+libvcruntime.lib(std_type_info.obj) : error LNK2019: unresolved external symbol __imp_InterlockedPushEntrySList referenced in function __std_type_info_name
+libvcruntime.lib(std_type_info.obj) : error LNK2019: unresolved external symbol __imp_InterlockedFlushSList referenced in function __std_type_info_destroy_list
+libvcruntime.lib(_jmpuwind_.obj) : error LNK2019: unresolved external symbol RtlUnwindEx referenced in function _local_unwind
+libucrt.lib(close.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(getlocaleinfoa.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(commit.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(write.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(lseek.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(signal.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(wctomb.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libvcruntime.lib(per_thread_data.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(free_base.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libucrt.lib(per_thread_data.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+libvcruntime.lib(per_thread_data.obj) : error LNK2019: unresolved external symbol __imp_SetLastError referenced in function "public: __cdecl `anonymous namespace'::scoped_get_last_error_reset::~scoped_get_last_error_reset(void)" (??1scoped_get_last_error_reset@?A0xa80d61d6@@QEAA@XZ)
+libucrt.lib(per_thread_data.obj) : error LNK2001: unresolved external symbol __imp_SetLastError
+libvcruntime.lib(locks.obj) : error LNK2019: unresolved external symbol __imp_EnterCriticalSection referenced in function __vcrt_lock
+libucrt.lib(locks.obj) : error LNK2001: unresolved external symbol __imp_EnterCriticalSection
+libucrt.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_EnterCriticalSection
+libucrt.lib(_file.obj) : error LNK2001: unresolved external symbol __imp_EnterCriticalSection
+libvcruntime.lib(locks.obj) : error LNK2019: unresolved external symbol __imp_LeaveCriticalSection referenced in function __vcrt_unlock
+libucrt.lib(locks.obj) : error LNK2001: unresolved external symbol __imp_LeaveCriticalSection
+libucrt.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_LeaveCriticalSection
+libucrt.lib(_file.obj) : error LNK2001: unresolved external symbol __imp_LeaveCriticalSection
+libucrt.lib(closeall.obj) : error LNK2001: unresolved external symbol __imp_DeleteCriticalSection
+libvcruntime.lib(locks.obj) : error LNK2001: unresolved external symbol __imp_DeleteCriticalSection
+libucrt.lib(locks.obj) : error LNK2001: unresolved external symbol __imp_DeleteCriticalSection
+libucrt.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_DeleteCriticalSection
+libucrt.lib(_file.obj) : error LNK2001: unresolved external symbol __imp_DeleteCriticalSection
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2019: unresolved external symbol __imp_InitializeCriticalSectionAndSpinCount referenced in function __vcrt_InitializeCriticalSectionEx
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_InitializeCriticalSectionAndSpinCount
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2019: unresolved external symbol __imp_TlsAlloc referenced in function __vcrt_FlsAlloc
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_TlsAlloc
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2019: unresolved external symbol __imp_TlsGetValue referenced in function __vcrt_FlsGetValue
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_TlsGetValue
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2019: unresolved external symbol __imp_TlsSetValue referenced in function __vcrt_FlsSetValue
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_TlsSetValue
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2019: unresolved external symbol __imp_TlsFree referenced in function __vcrt_FlsFree
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_TlsFree
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2019: unresolved external symbol __imp_FreeLibrary referenced in function "struct HINSTANCE__ * __cdecl try_get_first_available_module(enum `anonymous namespace'::module_id const * const,enum `anonymous namespace'::module_id const * const)" (?try_get_first_available_module@@YAPEAUHINSTANCE__@@QEBW4module_id@?A0x679b24ab@@0@Z)
+libucrt.lib(exit.obj) : error LNK2001: unresolved external symbol __imp_FreeLibrary
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_FreeLibrary
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2019: unresolved external symbol __imp_GetProcAddress referenced in function "void * __cdecl try_get_function(enum `anonymous namespace'::function_id,char const * const,enum A0x679b24ab::module_id const * const,enum A0x679b24ab::module_id const * const)" (?try_get_function@@YAPEAXW4function_id@?A0x679b24ab@@QEBDQEBW4module_id@2@2@Z)
+libucrt.lib(exit.obj) : error LNK2001: unresolved external symbol __imp_GetProcAddress
+libucrt.lib(free_base.obj) : error LNK2001: unresolved external symbol __imp_GetProcAddress
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_GetProcAddress
+libvcruntime.lib(winapi_downlevel.obj) : error LNK2019: unresolved external symbol __imp_LoadLibraryExW referenced in function "struct HINSTANCE__ * __cdecl try_get_first_available_module(enum `anonymous namespace'::module_id const * const,enum `anonymous namespace'::module_id const * const)" (?try_get_first_available_module@@YAPEAUHINSTANCE__@@QEBW4module_id@?A0x679b24ab@@0@Z)
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_LoadLibraryExW
+libucrt.lib(report_runtime_error.obj) : error LNK2019: unresolved external symbol __imp_GetStdHandle referenced in function "void __cdecl write_string_to_console(wchar_t const * const)" (?write_string_to_console@@YAXQEB_W@Z)
+libucrt.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_GetStdHandle
+libucrt.lib(report_runtime_error.obj) : error LNK2019: unresolved external symbol __imp_WriteFile referenced in function "void __cdecl write_string_to_console(wchar_t const * const)" (?write_string_to_console@@YAXQEB_W@Z)
+libucrt.lib(write.obj) : error LNK2001: unresolved external symbol __imp_WriteFile
+libucrt.lib(report_runtime_error.obj) : error LNK2019: unresolved external symbol __imp_GetModuleFileNameW referenced in function __acrt_report_runtime_error
+libucrt.lib(argv_parsing.obj) : error LNK2001: unresolved external symbol __imp_GetModuleFileNameW
+libucrt.lib(argv_parsing.obj) : error LNK2019: unresolved external symbol __imp_GetModuleFileNameA referenced in function "int __cdecl common_configure_argv<char>(enum _crt_argv_mode)" (??$common_configure_argv@D@@YAHW4_crt_argv_mode@@@Z)
+libucrt.lib(lcmapstringa.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+libucrt.lib(comparestringa.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+libucrt.lib(environment_initialization.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+libucrt.lib(wsetlocale.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+libucrt.lib(getstringtypea.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+libucrt.lib(mbtowc.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+libucrt.lib(getlocaleinfoa.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+libucrt.lib(write.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+libucrt.lib(environment_initialization.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+libucrt.lib(get_environment_from_os.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+libucrt.lib(wctomb.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+libucrt.lib(lcmapstringa.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+libucrt.lib(exit.obj) : error LNK2019: unresolved external symbol __imp_GetCurrentProcess referenced in function "void __cdecl exit_or_terminate_process(unsigned int)" (?exit_or_terminate_process@@YAXI@Z)
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol __imp_GetCurrentProcess
+LIBCMT.lib(gs_report.obj) : error LNK2001: unresolved external symbol __imp_GetCurrentProcess
+libucrt.lib(exit.obj) : error LNK2019: unresolved external symbol __imp_ExitProcess referenced in function "void __cdecl exit_or_terminate_process(unsigned int)" (?exit_or_terminate_process@@YAXI@Z)
+libucrt.lib(exit.obj) : error LNK2019: unresolved external symbol __imp_TerminateProcess referenced in function "void __cdecl exit_or_terminate_process(unsigned int)" (?exit_or_terminate_process@@YAXI@Z)
+libucrt.lib(invalid_parameter.obj) : error LNK2001: unresolved external symbol __imp_TerminateProcess
+LIBCMT.lib(gs_report.obj) : error LNK2001: unresolved external symbol __imp_TerminateProcess
+libucrt.lib(exit.obj) : error LNK2019: unresolved external symbol __imp_GetModuleHandleExW referenced in function "void __cdecl try_cor_exit_process(unsigned int)" (?try_cor_exit_process@@YAXI@Z)
+libucrt.lib(argv_data.obj) : error LNK2019: unresolved external symbol __imp_GetCommandLineA referenced in function __acrt_initialize_command_line
+libucrt.lib(argv_data.obj) : error LNK2019: unresolved external symbol __imp_GetCommandLineW referenced in function __acrt_initialize_command_line
+libucrt.lib(wsetlocale.obj) : error LNK2019: unresolved external symbol __imp_GetACP referenced in function _expandlocale
+libucrt.lib(mbctype.obj) : error LNK2001: unresolved external symbol __imp_GetACP
+libucrt.lib(get_qualified_locale.obj) : error LNK2001: unresolved external symbol __imp_GetACP
+libucrt.lib(getqloc_downlevel.obj) : error LNK2001: unresolved external symbol __imp_GetACP
+libucrt.lib(free_base.obj) : error LNK2019: unresolved external symbol __imp_HeapFree referenced in function _free_base
+libucrt.lib(malloc_base.obj) : error LNK2019: unresolved external symbol __imp_HeapAlloc referenced in function _malloc_base
+libucrt.lib(calloc_base.obj) : error LNK2001: unresolved external symbol __imp_HeapAlloc
+libucrt.lib(per_thread_data.obj) : error LNK2019: unresolved external symbol __imp_GetCurrentThread referenced in function __threadhandle
+libucrt.lib(crtmbox.obj) : error LNK2019: unresolved external symbol __imp_OutputDebugStringA referenced in function "int __cdecl common_show_message_box<char>(char const * const,char const * const,unsigned int)" (??$common_show_message_box@D@@YAHQEBD0I@Z)
+libucrt.lib(crtmbox.obj) : error LNK2019: unresolved external symbol __imp_OutputDebugStringW referenced in function "int __cdecl common_show_message_box<wchar_t>(wchar_t const * const,wchar_t const * const,unsigned int)" (??$common_show_message_box@_W@@YAHQEB_W0I@Z)
+libucrt.lib(argv_wildcards.obj) : error LNK2019: unresolved external symbol __imp_FindClose referenced in function "int __cdecl expand_argument_wildcards<char>(char * const,char * const,class `anonymous namespace'::argument_list<char> &)" (??$expand_argument_wildcards@D@@YAHQEAD0AEAV?$argument_list@D@?A0x5f5c8891@@@Z)
+libucrt.lib(argv_wildcards.obj) : error LNK2019: unresolved external symbol __imp_FindFirstFileExA referenced in function "int __cdecl expand_argument_wildcards<char>(char * const,char * const,class `anonymous namespace'::argument_list<char> &)" (??$expand_argument_wildcards@D@@YAHQEAD0AEAV?$argument_list@D@?A0x5f5c8891@@@Z)
+libucrt.lib(argv_wildcards.obj) : error LNK2019: unresolved external symbol __imp_FindFirstFileExW referenced in function "int __cdecl expand_argument_wildcards<wchar_t>(wchar_t * const,wchar_t * const,class `anonymous namespace'::argument_list<wchar_t> &)" (??$expand_argument_wildcards@_W@@YAHQEA_W0AEAV?$argument_list@_W@?A0x5f5c8891@@@Z)
+libucrt.lib(argv_wildcards.obj) : error LNK2019: unresolved external symbol __imp_FindNextFileA referenced in function "int __cdecl expand_argument_wildcards<char>(char * const,char * const,class `anonymous namespace'::argument_list<char> &)" (??$expand_argument_wildcards@D@@YAHQEAD0AEAV?$argument_list@D@?A0x5f5c8891@@@Z)
+libucrt.lib(argv_wildcards.obj) : error LNK2019: unresolved external symbol __imp_FindNextFileW referenced in function "int __cdecl expand_argument_wildcards<wchar_t>(wchar_t * const,wchar_t * const,class `anonymous namespace'::argument_list<wchar_t> &)" (??$expand_argument_wildcards@_W@@YAHQEA_W0AEAV?$argument_list@_W@?A0x5f5c8891@@@Z)
+libucrt.lib(mbctype.obj) : error LNK2019: unresolved external symbol __imp_IsValidCodePage referenced in function _setmbcp_nolock
+libucrt.lib(get_qualified_locale.obj) : error LNK2001: unresolved external symbol __imp_IsValidCodePage
+libucrt.lib(getqloc_downlevel.obj) : error LNK2001: unresolved external symbol __imp_IsValidCodePage
+libucrt.lib(mbctype.obj) : error LNK2019: unresolved external symbol __imp_GetOEMCP referenced in function "int __cdecl getSystemCP(int)" (?getSystemCP@@YAHH@Z)
+libucrt.lib(mbctype.obj) : error LNK2019: unresolved external symbol __imp_GetCPInfo referenced in function "void __cdecl setSBUpLow(struct __crt_multibyte_data *)" (?setSBUpLow@@YAXPEAU__crt_multibyte_data@@@Z)
+libucrt.lib(initctype.obj) : error LNK2001: unresolved external symbol __imp_GetCPInfo
+libucrt.lib(comparestringa.obj) : error LNK2001: unresolved external symbol __imp_GetCPInfo
+libucrt.lib(get_environment_from_os.obj) : error LNK2019: unresolved external symbol __imp_GetEnvironmentStringsW referenced in function __dcrt_get_narrow_environment_from_os
+libucrt.lib(get_environment_from_os.obj) : error LNK2019: unresolved external symbol __imp_FreeEnvironmentStringsW referenced in function "public: __cdecl __crt_unique_handle_t<struct `anonymous namespace'::environment_strings_traits>::~__crt_unique_handle_t<struct `anonymous namespace'::environment_strings_traits>(void)" (??1?$__crt_unique_handle_t@Uenvironment_strings_traits@?A0x1bf47908@@@@QEAA@XZ)
+libucrt.lib(setenv.obj) : error LNK2019: unresolved external symbol __imp_SetEnvironmentVariableA referenced in function "int __cdecl common_set_variable_in_environment_nolock<char>(char * const,int)" (??$common_set_variable_in_environment_nolock@D@@YAHQEADH@Z)
+libucrt.lib(setenv.obj) : error LNK2019: unresolved external symbol __imp_SetEnvironmentVariableW referenced in function "int __cdecl common_set_variable_in_environment_nolock<wchar_t>(wchar_t * const,int)" (??$common_set_variable_in_environment_nolock@_W@@YAHQEA_WH@Z)
+libucrt.lib(osfinfo.obj) : error LNK2019: unresolved external symbol __imp_SetStdHandle referenced in function __acrt_lowio_set_os_handle
+libucrt.lib(osfinfo.obj) : error LNK2019: unresolved external symbol __imp_GetFileType referenced in function _open_osfhandle
+libucrt.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_GetFileType
+libucrt.lib(getstringtypea.obj) : error LNK2019: unresolved external symbol __imp_GetStringTypeW referenced in function __acrt_GetStringTypeA
+libucrt.lib(iswctype.obj) : error LNK2001: unresolved external symbol __imp_GetStringTypeW
+libucrt.lib(getqloc_downlevel.obj) : error LNK2019: unresolved external symbol __imp_GetLocaleInfoW referenced in function CountryEnumProc
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_GetLocaleInfoW
+libucrt.lib(getqloc_downlevel.obj) : error LNK2019: unresolved external symbol __imp_IsValidLocale referenced in function __acrt_get_qualified_locale_downlevel
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_IsValidLocale
+libucrt.lib(getqloc_downlevel.obj) : error LNK2019: unresolved external symbol __imp_GetUserDefaultLCID referenced in function GetLcidFromDefault
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_GetUserDefaultLCID
+libucrt.lib(getqloc_downlevel.obj) : error LNK2019: unresolved external symbol __imp_EnumSystemLocalesW referenced in function GetLcidFromCountry
+libucrt.lib(winapi_thunks.obj) : error LNK2001: unresolved external symbol __imp_EnumSystemLocalesW
+libucrt.lib(winapi_thunks.obj) : error LNK2019: unresolved external symbol __imp_GetDateFormatW referenced in function __acrt_GetDateFormatEx
+libucrt.lib(winapi_thunks.obj) : error LNK2019: unresolved external symbol __imp_GetTimeFormatW referenced in function __acrt_GetTimeFormatEx
+libucrt.lib(winapi_thunks.obj) : error LNK2019: unresolved external symbol __imp_CompareStringW referenced in function __acrt_CompareStringEx
+libucrt.lib(winapi_thunks.obj) : error LNK2019: unresolved external symbol __imp_LCMapStringW referenced in function __acrt_LCMapStringEx
+libucrt.lib(heap_handle.obj) : error LNK2019: unresolved external symbol __imp_GetProcessHeap referenced in function __acrt_initialize_heap
+libucrt.lib(signal.obj) : error LNK2019: unresolved external symbol __imp_SetConsoleCtrlHandler referenced in function signal
+libucrt.lib(msize.obj) : error LNK2019: unresolved external symbol __imp_HeapSize referenced in function _msize_base
+libucrt.lib(realloc_base.obj) : error LNK2019: unresolved external symbol __imp_HeapReAlloc referenced in function _realloc_base
+libucrt.lib(commit.obj) : error LNK2019: unresolved external symbol __imp_FlushFileBuffers referenced in function "public: int __cdecl __crt_seh_guarded_call<int>::operator()<class <lambda_a37b2b86f63e897a80ea819b0eb08c01>,class <lambda_38ce7e780aa69e748d6df282ebc68efe> &,class <lambda_99fb1378e971ab6e7edea83e3a7a83a2> >(class <lambda_a37b2b86f63e897a80ea819b0eb08c01> &&,class <lambda_38ce7e780aa69e748d6df282ebc68efe> &,class <lambda_99fb1378e971ab6e7edea83e3a7a83a2> &&)" (??$?RV<lambda_a37b2b86f63e897a80ea819b0eb08c01>@@AEAV<lambda_38ce7e780aa69e748d6df282ebc68efe>@@V<lambda_99fb1378e971ab6e7edea83e3a7a83a2>@@@?$__crt_seh_guarded_call@H@@QEAAH$$QEAV<lambda_a37b2b86f63e897a80ea819b0eb08c01>@@AEAV<lambda_38ce7e780aa69e748d6df282ebc68efe>@@$$QEAV<lambda_99fb1378e971ab6e7edea83e3a7a83a2>@@@Z)
+libucrt.lib(write.obj) : error LNK2019: unresolved external symbol __imp_GetConsoleCP referenced in function "struct `anonymous namespace'::write_result __cdecl write_double_translated_ansi_nolock(int,char const * const,unsigned int)" (?write_double_translated_ansi_nolock@@YA?AUwrite_result@?A0x17268360@@HQEBDI@Z)
+libucrt.lib(write.obj) : error LNK2019: unresolved external symbol __imp_GetConsoleMode referenced in function "bool __cdecl write_requires_double_translation_nolock(int)" (?write_requires_double_translation_nolock@@YA_NH@Z)
+libucrt.lib(lseek.obj) : error LNK2019: unresolved external symbol __imp_SetFilePointerEx referenced in function "__int64 __cdecl common_lseek_nolock<__int64>(int,__int64,int)" (??$common_lseek_nolock@_J@@YA_JH_JH@Z)
+libucrt.lib(putwch.obj) : error LNK2019: unresolved external symbol __imp_WriteConsoleW referenced in function _putwch_nolock
+libucrt.lib(close.obj) : error LNK2019: unresolved external symbol __imp_CloseHandle referenced in function "unsigned long __cdecl close_os_handle_nolock(int)" (?close_os_handle_nolock@@YAKH@Z)
+libucrt.lib(initcon.obj) : error LNK2001: unresolved external symbol __imp_CloseHandle
+libucrt.lib(initcon.obj) : error LNK2019: unresolved external symbol __imp_CreateFileW referenced in function __dcrt_lowio_initialize_console_output
+libucrt.lib(fpexcept.obj) : error LNK2019: unresolved external symbol __imp_RaiseException referenced in function _raise_exc_ex
+C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\Mf_vista.lib : warning LNK4272: library machine type 'X86' conflicts with target machine type 'x64'
+C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\kernel32.lib : warning LNK4272: library machine type 'X86' conflicts with target machine type 'x64'
+C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\uuid.lib : warning LNK4272: library machine type 'X86' conflicts with target machine type 'x64'
+.sconf_temp\conftest_0.exe : fatal error LNK1120: 84 unresolved externals
+scons: Configure: no
+

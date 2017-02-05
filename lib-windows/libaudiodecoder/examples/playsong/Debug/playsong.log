@@ -1,0 +1,4 @@
+﻿  playsong.cpp
+c:\users\edsel malasig\documents\project_windows\sndpeek-1.4-rtaudio\src\libaudiodecoder\include\audiodecoderbase.h(106): warning C4251: 'AudioDecoderBase::m_filename': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'AudioDecoderBase'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+LINK : fatal error LNK1104: cannot open file 'audiodecoder.lib'

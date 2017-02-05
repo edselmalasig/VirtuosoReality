@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		655F7B74153A076800FF27EA /* demo.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655F7B73153A076600FF27EA /* demo.mp3 */; };
+		BF2D43901D5F308F00C71EFF /* libportaudio.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 655F7AC41539F68800FF27EA /* libportaudio.2.dylib */; };
+		BF2D43921D5F315F00C71EFF /* libaudiodecoder.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2D43911D5F315F00C71EFF /* libaudiodecoder.dylib */; };
+		BF6B1D4A1E29D8750084384D /* AudioTesting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1D471E29D8750084384D /* AudioTesting.cpp */; };
+		BF6B1D4B1E29D8750084384D /* AudioTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6B1D481E29D8750084384D /* AudioTesting.h */; };
+		BF6B1D4C1E29D8750084384D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1D491E29D8750084384D /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				655F7B74153A076800FF27EA /* demo.mp3 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		655F7AC41539F68800FF27EA /* libportaudio.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libportaudio.2.dylib; path = /usr/local/lib/libportaudio.2.dylib; sourceTree = "<absolute>"; };
+		655F7B73153A076600FF27EA /* demo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = demo.mp3; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* playsong */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = playsong; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF2D43801D5F300600C71EFF /* audiodecoderbase.os */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = audiodecoderbase.os; sourceTree = "<group>"; };
+		BF2D43811D5F300600C71EFF /* audiodecodercoreaudio.os */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = audiodecodercoreaudio.os; sourceTree = "<group>"; };
+		BF2D43821D5F300600C71EFF /* libaudiodecoder.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaudiodecoder.dylib; sourceTree = "<group>"; };
+		BF2D43831D5F300600C71EFF /* audiodecoderbase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = audiodecoderbase.cpp; sourceTree = "<group>"; };
+		BF2D43841D5F300600C71EFF /* audiodecodercoreaudio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = audiodecodercoreaudio.cpp; sourceTree = "<group>"; };
+		BF2D43851D5F300600C71EFF /* audiodecodermediafoundation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = audiodecodermediafoundation.cpp; sourceTree = "<group>"; };
+		BF2D43861D5F300600C71EFF /* SConscript */ = {isa = PBXFileReference; lastKnownFileType = text; path = SConscript; sourceTree = "<group>"; };
+		BF2D438A1D5F302E00C71EFF /* CADebugMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		BF2D438B1D5F302E00C71EFF /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		BF2D438C1D5F302E00C71EFF /* audiodecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecoder.h; sourceTree = "<group>"; };
+		BF2D438D1D5F302E00C71EFF /* audiodecoderbase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecoderbase.h; sourceTree = "<group>"; };
+		BF2D438E1D5F302E00C71EFF /* audiodecodercoreaudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecodercoreaudio.h; sourceTree = "<group>"; };
+		BF2D438F1D5F302E00C71EFF /* audiodecodermediafoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecodermediafoundation.h; sourceTree = "<group>"; };
+		BF2D43911D5F315F00C71EFF /* libaudiodecoder.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaudiodecoder.dylib; path = ../../libaudiodecoder.dylib; sourceTree = "<group>"; };
+		BF6B1D471E29D8750084384D /* AudioTesting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioTesting.cpp; sourceTree = "<group>"; };
+		BF6B1D481E29D8750084384D /* AudioTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTesting.h; sourceTree = "<group>"; };
+		BF6B1D491E29D8750084384D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C6859E8B029090EE04C91782 /* playsong.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = playsong.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF2D43921D5F315F00C71EFF /* libaudiodecoder.dylib in Frameworks */,
+				BF2D43901D5F308F00C71EFF /* libportaudio.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* playsong */ = {
+			isa = PBXGroup;
+			children = (
+				BF2D43911D5F315F00C71EFF /* libaudiodecoder.dylib */,
+				BF2D43881D5F302E00C71EFF /* include */,
+				BF2D437E1D5F300600C71EFF /* src */,
+				655F7B73153A076600FF27EA /* demo.mp3 */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				655F7AC41539F68800FF27EA /* libportaudio.2.dylib */,
+			);
+			name = playsong;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B1D471E29D8750084384D /* AudioTesting.cpp */,
+				BF6B1D481E29D8750084384D /* AudioTesting.h */,
+				BF6B1D491E29D8750084384D /* main.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* playsong */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF2D437E1D5F300600C71EFF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BF2D437F1D5F300600C71EFF /* .obj */,
+				BF2D43831D5F300600C71EFF /* audiodecoderbase.cpp */,
+				BF2D43841D5F300600C71EFF /* audiodecodercoreaudio.cpp */,
+				BF2D43851D5F300600C71EFF /* audiodecodermediafoundation.cpp */,
+				BF2D43861D5F300600C71EFF /* SConscript */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		BF2D437F1D5F300600C71EFF /* .obj */ = {
+			isa = PBXGroup;
+			children = (
+				BF2D43801D5F300600C71EFF /* audiodecoderbase.os */,
+				BF2D43811D5F300600C71EFF /* audiodecodercoreaudio.os */,
+				BF2D43821D5F300600C71EFF /* libaudiodecoder.dylib */,
+			);
+			path = .obj;
+			sourceTree = "<group>";
+		};
+		BF2D43881D5F302E00C71EFF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BF2D43891D5F302E00C71EFF /* apple */,
+				BF2D438C1D5F302E00C71EFF /* audiodecoder.h */,
+				BF2D438D1D5F302E00C71EFF /* audiodecoderbase.h */,
+				BF2D438E1D5F302E00C71EFF /* audiodecodercoreaudio.h */,
+				BF2D438F1D5F302E00C71EFF /* audiodecodermediafoundation.h */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = "<group>";
+		};
+		BF2D43891D5F302E00C71EFF /* apple */ = {
+			isa = PBXGroup;
+			children = (
+				BF2D438A1D5F302E00C71EFF /* CADebugMacros.h */,
+				BF2D438B1D5F302E00C71EFF /* CAStreamBasicDescription.h */,
+			);
+			path = apple;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* playsong.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BF2D43871D5F302000C71EFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF6B1D4B1E29D8750084384D /* AudioTesting.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* playsong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "playsong" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+				BF2D43871D5F302000C71EFF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = playsong;
+			productInstallPath = "$(HOME)/bin";
+			productName = playsong;
+			productReference = 8DD76F6C0486A84900D96B5E /* playsong */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+			};
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "playsong" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* playsong */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* playsong */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF6B1D4A1E29D8750084384D /* AudioTesting.cpp in Sources */,
+				BF6B1D4C1E29D8750084384D /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/edselmalasig/Projects_OSX/libaudiodecoder-master",
+					/usr/local/lib/,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-laudiodecoder",
+					"-lportaudio.2",
+				);
+				PRODUCT_NAME = playsong;
+				SDKROOT = macosx;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/edselmalasig/Projects_OSX/libaudiodecoder-master",
+					/usr/local/lib/,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-laudiodecoder",
+					"-lportaudio.2",
+				);
+				PRODUCT_NAME = playsong;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				ENABLE_TESTABILITY = YES;
+				GCC_VERSION = 4.0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-I/usr/local/include",
+					"$(OTHER_CFLAGS)",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				GCC_VERSION = 4.0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-I/usr/local/include",
+					"$(OTHER_CFLAGS)",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "playsong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "playsong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

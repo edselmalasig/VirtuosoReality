@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glew-2.0.0/build/cmake/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glew-2.0.0\build\CMakeFiles\generate.stamp is up-to-date.
+  glewinfo.c
+C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glew-2.0.0\src\glewinfo.c(13444): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
+  glewinfo.vcxproj -> C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glew-2.0.0\build\bin\Release\glewinfo.exe
