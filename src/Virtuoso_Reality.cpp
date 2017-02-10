@@ -74,7 +74,7 @@ GLint VirtuosoReality::g_buffer_count_b = 0;
 GLboolean VirtuosoReality::g_running = false;
 GLboolean VirtuosoReality::g_mute = FALSE;
 
-char * VirtuosoReality::g_filename;
+std::string VirtuosoReality::g_filename;
 GLint VirtuosoReality::g_starting = 0;
 GLint VirtuosoReality::g_wf = 0;
 GLboolean VirtuosoReality::g_freeze = false;
@@ -281,7 +281,7 @@ void VirtuosoReality::init(int argc, char ** argv){
         }
         else
         {
-            if( g_filename )
+            if( g_filename.empty() )
             {
                 fprintf( stderr, "[Virtuoso Reality]: multiple filenames specified...\n" );
                 usage();
@@ -336,15 +336,26 @@ void VirtuosoReality::avrLoop(){
         if(showui){
             this->showUI();
             ImGui::Render();
+            if(g_filename.empty()){
+                glfwPollEvents();
+                glfwSwapBuffers(ws->window);
+                continue;
+            }
         }
-        
-        if(g_filename && !g_file_running){
+        /*
+        if(!g_filename.empty() && !g_file_running){
             audio_play_done = initialize_audio();
-            g_filename = new char;
-            count = samplesRead;
+            //g_filename = new char[MAX_PATH_BYTES];
             show_display = true;
-        }
-        if(show_display && g_file_running && (audio_play_done < 3)){
+         g_running = FALSE;
+         g_play = FALSE;
+         g_filename = "";
+         g_file_running = FALSE;
+         samplesRead = 0;
+         g_sf = NULL;
+        }*/
+        
+        if(!g_filename.empty() && g_file_running){
             this->displayFunc();
             show_display = g_running;
         }
@@ -363,37 +374,42 @@ void VirtuosoReality::showUI(){
         static float f = 0.0f;
         ImGui::Text("Virtuoso Reality - from sndpeek");
         if (ImGui::Button("Demo Window")) show_demo_window ^= 1;
-        if (ImGui::Button("File Chooser Window")) show_fchooser_window ^= 1;
+        if (ImGui::Button("File Chooser Window")){ show_fchooser_window ^= 1;  dlg = new ImGuiFs::Dialog;};
         if (ImGui::Button("Help Window")) show_help_window ^= 1;
         if (ImGui::Button("About")) show_about_window ^= 1;
         //if (ImGui::Button("Status Window")) show_stat_window ^= 1;
         ImGui::End();
     }
-    
+
     // 2. Show another simple window, this time using an explicit Begin/End pair
     if (show_fchooser_window)
     {
         ImGui::SetNextWindowSize(ImVec2(200,100), ImGuiSetCond_FirstUseEver);
         ImGui::Begin("File Chooser", &show_fchooser_window);
-                
+        
+
         browseButtonPressed = ImGui::Button("Choose [a] file[s] ...");  // we need a trigger boolean variable
                                      // one per dialog (and must be static)
-        dlg.chooseFileDialog(browseButtonPressed);              // see other dialog types and the full list of arguments for advanced usage
+        dlg->chooseFileDialog(browseButtonPressed);              // see other dialog types and the full list of arguments for advanced usage
+        
         if (browseButtonPressed) {
-            ImGui::Text("Chosen file: \"%s\"",dlg.getChosenPath());
+            ImGui::Text("Chosen file: \"%s\"",dlg->getChosenPath());
         }
         
         // If you want to copy the (valid) returned path somewhere, you can use something like:
         //static char myPath[ImGuiFs::MAX_PATH_BYTES];
-        if (strlen(dlg.getChosenPath())>0 && strlen(musicPath) == 0) {
-            strcpy(musicPath,dlg.getChosenPath());
-            ImGui::Text("Chosen file: \"%s\"",dlg.getChosenPath());
+        if (strlen(dlg->getChosenPath())>0 && strlen(musicPath) == 0) {
+            strcpy(musicPath,dlg->getChosenPath());
+            ImGui::Text("Chosen file: \"%s\"",dlg->getChosenPath());
             
-            g_filename = musicPath;
+            string str(musicPath);
+            g_filename = str;
             std::cout << musicPath << " : " << g_filename << std::endl;
             browseButtonPressed = !browseButtonPressed;
             show_fchooser_window = !show_fchooser_window;
+            delete dlg;
             this->initialize_graphics();
+            this->initialize_audio();
         }
         
         // If you want to copy the (valid) returned path somewhere, you can use something like:
@@ -638,11 +654,13 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     if (b_seek){
         temp = g_position + g_sf->positionInSamples()+1;
         g_sf->seek(temp);
+        samplesRead = temp;
     }
     else if (g_position < 0){
         g_position = 0;
         temp = g_position;
         g_sf->seek(temp);
+        samplesRead = temp;
     }
     else{
         temp = g_sf->positionInSamples();
@@ -728,7 +746,7 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     
     // done...
     
-    if( samplesRead*2 > (g_sf->numSamples())/2){
+    if( samplesRead > g_sf->numSamples()){
         // done...
         g_running = FALSE;
         g_play = FALSE;
@@ -812,9 +830,9 @@ bool VirtuosoReality::initialize_audio( )
     };
     
     // read from file
-    if( g_filename )
+    if( !g_filename.empty() )
     {
-        fprintf( stderr, "[Virtuoso Reality]: opening %s...\n", g_filename );
+        fprintf( stderr, "[Virtuoso Reality]: opening %s...\n", g_filename.c_str() );
         // attempt to open file
         g_sf = new AudioDecoder(musicPath);
         if (g_sf->open() != AUDIODECODER_OK)
@@ -898,7 +916,7 @@ bool VirtuosoReality::initialize_audio( )
     }
     
     //make sound
-    if( g_filename == NULL)
+    if( g_filename.empty() )
     {
         cout << "no file to play." << endl;
         return false;
@@ -1500,7 +1518,7 @@ void VirtuosoReality::displayFunc( )
     // lissajous
     if( g_lissajous )
     {
-        if( !g_filename ) { // real-time mic input
+        if( g_filename.empty() ) { // real-time mic input
             draw_Lissajous( g_stereo_buffer, g_buffer_size, 1 );
         } else { // reading from file
             draw_Lissajous( g_stereo_buffer, g_buffer_size, 2 );
@@ -1620,7 +1638,7 @@ void VirtuosoReality::displayFunc( )
                     // draw the now line?
                     if( g_draw_play )
                     {
-                        glLineWidth( g_filename == NULL ? 2.0f : 3.0f );
+                        glLineWidth( g_filename.empty() ? 2.0f : 3.0f );
                         glColor3f( .4f, 1.0f, 1.0f );
                     }
                 }
@@ -1823,7 +1841,7 @@ void VirtuosoReality::displayFunc( )
     // maintain count from render
     g_buffer_count_b++;
     // check against count from reading function
-    if( g_filename && !g_file_running && g_buffer_count_b == g_buffer_count_a )
+    if( !g_filename.empty() && !g_file_running && g_buffer_count_b == g_buffer_count_a )
         g_running = FALSE;
 }
 
@@ -1850,7 +1868,7 @@ void VirtuosoReality::extract_buffer( )
         usleep( 1000 );
     
     // get data
-    if( !g_filename )
+    if( g_filename.empty() )
     {
         g_mutex.lock();
         memcpy( buffer, g_audio_buffer, g_buffer_size * sizeof(SAMPLE) );
@@ -1901,6 +1919,6 @@ void VirtuosoReality::extract_buffer( )
     
     // file reading stuff
     g_buffer_count_b++;
-    if( g_filename && !g_file_running && g_buffer_count_a == g_buffer_count_b )
+    if( !g_filename.empty() && !g_file_running && g_buffer_count_a == g_buffer_count_b )
         g_running = FALSE;
 }

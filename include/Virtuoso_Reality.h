@@ -3,6 +3,7 @@
 
 #include "Virtuoso_Reality_Util.h"
 #include "Windowing_System.h"
+#include <ctype.h>
     //-----------------------------------------------------------------------------
     // global variables and #defines
     //-----------------------------------------------------------------------------
@@ -43,7 +44,7 @@ public:
 #define MAX_PATH_BYTES 2048
     char musicPath[MAX_PATH_BYTES];
     bool browseButtonPressed = false;
-    ImGuiFs::Dialog dlg;
+    ImGuiFs::Dialog  * dlg;
     bool show_demo_window = false;
     bool show_fchooser_window = false;
     bool show_help_window = false;
@@ -61,7 +62,7 @@ public:
     // starting a file
     static GLint g_starting; // = 0;
     // input filename
-    static char * g_filename;// = NULL;
+    static string g_filename;// = NULL;
     // draw analysis features
     static GLboolean g_draw_features;// = TRUE;
     // freeze display

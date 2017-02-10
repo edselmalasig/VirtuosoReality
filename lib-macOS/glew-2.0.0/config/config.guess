@@ -1,7 +1,9 @@
 #! /bin/sh
 # Attempt to guess a canonical system name.
 #   Copyright 1992-2016 Free Software Foundation, Inc.
+
 timestamp='2016-05-15'
+
 # This file is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
@@ -28,23 +30,34 @@ timestamp='2016-05-15'
 # http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess
 #
 # Please send patches to <config-patches@gnu.org>.
+
+
 me=`echo "$0" | sed -e 's,.*/,,'`
+
 usage="\
 Usage: $0 [OPTION]
+
 Output the configuration name of the system \`$me' is run on.
+
 Operation modes:
   -h, --help         print this help, then exit
   -t, --time-stamp   print date of last modification, then exit
   -v, --version      print version number, then exit
+
 Report bugs and patches to <config-patches@gnu.org>."
+
 version="\
 GNU config.guess ($timestamp)
+
 Originally written by Per Bothner.
 Copyright 1992-2016 Free Software Foundation, Inc.
+
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+
 help="
 Try \`$me --help' for more information."
+
 # Parse command line
 while test $# -gt 0 ; do
   case $1 in
@@ -65,18 +78,24 @@ while test $# -gt 0 ; do
        break ;;
   esac
 done
+
 if test $# != 0; then
   echo "$me: too many arguments$help" >&2
   exit 1
 fi
+
 trap 'exit 1' 1 2 15
+
 # CC_FOR_BUILD -- compiler used by this script. Note that the use of a
 # compiler to aid in system detection is discouraged as it requires
 # temporary files to be created and, as you can see below, it is a
 # headache to deal with in a portable fashion.
+
 # Historically, `CC_FOR_BUILD' used to be named `HOST_CC'. We still
 # use `HOST_CC' if defined, but it is deprecated.
+
 # Portable tmp directory creation inspired by the Autoconf team.
+
 set_cc_for_build='
 trap "exitcode=\$?; (rm -f \$tmpfiles 2>/dev/null; rmdir \$tmp 2>/dev/null) && exit \$exitcode" 0 ;
 trap "rm -f \$tmpfiles 2>/dev/null; rmdir \$tmp 2>/dev/null; exit 1" 1 2 13 15 ;
@@ -101,20 +120,24 @@ case $CC_FOR_BUILD,$HOST_CC,$CC in
  ,,*)   CC_FOR_BUILD=$CC ;;
  ,*,*)  CC_FOR_BUILD=$HOST_CC ;;
 esac ; set_cc_for_build= ;'
+
 # This is needed to find uname on a Pyramid OSx when run in the BSD universe.
 # (ghazi@noc.rutgers.edu 1994-08-24)
 if (test -f /.attbin/uname) >/dev/null 2>&1 ; then
 	PATH=$PATH:/.attbin ; export PATH
 fi
+
 UNAME_MACHINE=`(uname -m) 2>/dev/null` || UNAME_MACHINE=unknown
 UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
 UNAME_SYSTEM=`(uname -s) 2>/dev/null`  || UNAME_SYSTEM=unknown
 UNAME_VERSION=`(uname -v) 2>/dev/null` || UNAME_VERSION=unknown
+
 case "${UNAME_SYSTEM}" in
 Linux|GNU|GNU/*)
 	# If the system lacks a compiler, then just pick glibc.
 	# We could probably try harder.
 	LIBC=gnu
+
 	eval $set_cc_for_build
 	cat <<-EOF > $dummy.c
 	#include <features.h>
@@ -129,7 +152,9 @@ Linux|GNU|GNU/*)
 	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep '^LIBC' | sed 's, ,,g'`
 	;;
 esac
+
 # Note: order is significant - the case branches are not exclusive.
+
 case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
     *:NetBSD:*:*)
 	# NetBSD (nbsd) targets should (where applicable) match one or

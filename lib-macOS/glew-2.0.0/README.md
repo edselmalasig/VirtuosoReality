@@ -35,6 +35,59 @@ Snapshots may contain new features, bug-fixes or new OpenGL extensions ahead of 
 
 From a downloaded tarball or zip archive:
 
+### Linux and Mac
+
+#### Using GNU Make
+
+##### Install build tools
+
+Debian/Ubuntu/Mint:    `$ sudo apt-get install build-essential libxmu-dev libxi-dev libgl-dev libosmesa-dev git`
+
+RedHat/CentOS/Fedora:  `$ sudo yum install libXmu-devel libXi-devel libGL-devel git`
+
+##### Build
+
+	$ make
+	$ sudo make install
+	$ make clean
+
+Targets:    `all, glew.lib, glew.bin, clean, install, uninstall`
+
+Variables:  `SYSTEM=linux-clang, GLEW_DEST=/usr/local, STRIP=`
+
+#### Using cmake
+
+*CMake 2.8.12 or higher is required.*
+
+##### Install build tools
+
+Debian/Ubuntu/Mint:   `$ sudo apt-get install build-essential libXmu-dev libXi-dev libgl-dev git cmake`
+
+RedHat/CentOS/Fedora: `$ sudo yum install libXmu-devel libXi-devel libGL-devel git cmake`
+
+##### Build
+
+	$ cd build
+	$ cmake ./cmake 
+	$ make -j4
+
+| Target     | Description |
+| ---------- | ----------- |
+| glew       | Build the glew shared library. |
+| glew_s     | Build the glew static library. |
+| glewinfo   | Build the `glewinfo` executable (requires `BUILD_UTILS` to be `ON`). |
+| visualinfo | Build the `visualinfo` executable (requires `BUILD_UTILS` to be `ON`). |
+| install    | Install all enabled targets into `CMAKE_INSTALL_PREFIX`. |
+| clean      | Clean up build artifacts. |
+| all        | Build all enabled targets (default target). |
+
+| Variables       | Description |
+| --------------- | ----------- |
+| BUILD_UTILS     | Build the `glewinfo` and `visualinfo` executables. |
+| GLEW_REGAL      | Build in Regal mode. |
+| GLEW_OSMESA     | Build in off-screen Mesa mode. |
+| BUILD_FRAMEWORK | Build as MacOSX Framework.  Setting `CMAKE_INSTALL_PREFIX` to `/Library/Frameworks` is recommended. |
+
 ### Windows
 
 #### Visual Studio
