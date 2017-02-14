@@ -153,7 +153,6 @@ public:
     static GLfloat g_log_positions[SND_FFT_SIZE/2]; // precompute positions for log spacing
     
 
-    SF_INFO g_sf_info;
     
     // default sample rate
     //#if defined(__LINUX_ALSA__) || defined(__LINUX_OSS__) || defined(__LINUX_JACK__)

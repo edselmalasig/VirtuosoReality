@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src
+# Install script for directory: C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -24,30 +24,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
     set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
   else()
     set(CMAKE_INSTALL_COMPONENT)
-  endif()
-endif()
-
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Debug/glfw3dll.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Release/glfw3dll.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/MinSizeRel/glfw3dll.lib")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/RelWithDebInfo/glfw3dll.lib")
-  endif()
-endif()
-
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Debug/glfw3.dll")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Release/glfw3.dll")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/MinSizeRel/glfw3.dll")
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/RelWithDebInfo/glfw3.dll")
   endif()
 endif()
 

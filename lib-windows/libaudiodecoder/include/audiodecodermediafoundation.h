@@ -37,7 +37,7 @@
  */
 
 /**
- * \file AudioDecoderMediaFoundation.h
+ * \file audiodecodermediafoundation.h
  * \class AudioDecoderMediaFoundation
  * \brief Decodes MPEG4/AAC audio using the SourceReader interface of the
  * Media Foundation framework included in Windows 7.
@@ -47,14 +47,14 @@
  */
 
 
-#ifndef AudioDecoderMediaFoundation_H
-#define AudioDecoderMediaFoundation_H
+#ifndef AUDIODECODERMEDIAFOUNDATION_H
+#define AUDIODECODERMEDIAFOUNDATION_H
 
 #include "audiodecoderbase.h"
 
 //Force MSVC to generate a .lib file with /implib but without a .def file
 //http://msdn.microsoft.com/en-us/library/67wc07b9(v=vs.80).aspx
-//DllExport int AudioDecoderMediaFoundation = 1;
+DllExport int AudioDecoderMediaFoundation = 1;
 
 class IMFSourceReader;
 class IMFMediaType;
@@ -62,13 +62,13 @@ class IMFMediaSource;
 
 #define SHORT_SAMPLE short
 
-class AudioDecoderMediaFoundation : public AudioDecoderBase {
+class DllExport AudioDecoderMediaFoundation : public AudioDecoderBase {
   public:
     AudioDecoderMediaFoundation(const std::string filename);
     ~AudioDecoderMediaFoundation();
-    int open();
-    int seek(int sampleIdx);
-    int read(int size, const SAMPLE *buffer);
+    inline int open();
+    inline int seek(int sampleIdx);
+    inline int read(int size, const SAMPLE *buffer);
     inline int numSamples();
     std::vector<std::string> supportedFileExtensions();
 
@@ -97,4 +97,4 @@ class AudioDecoderMediaFoundation : public AudioDecoderBase {
 	SHORT_SAMPLE m_destBufferShort[8192];
 };
 
-#endif // ifndef AudioDecoderMediaFoundation_H
+#endif // ifndef AUDIODECODERMEDIAFOUNDATION_H

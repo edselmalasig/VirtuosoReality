@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/install_manifest.txt\"")
+if (NOT EXISTS "C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/install_manifest.txt" files)
+file(READ "C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

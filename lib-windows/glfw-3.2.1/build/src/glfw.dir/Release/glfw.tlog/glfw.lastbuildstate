@@ -1,2 +1,2 @@
-#TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.14393.0
-Release|Win32|C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\|
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.14393.0
+Release|Win32|C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\|

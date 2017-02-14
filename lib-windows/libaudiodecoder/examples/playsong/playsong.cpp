@@ -43,7 +43,7 @@
 #include <windows.h>
 #endif
 #include <iostream>
-#include <audiodecoder.h> // libaudiodecoder
+#include <audiodecoder/audiodecoder.h> // libaudiodecoder
 #include <portaudio.h>                 // PortAudio
 
 // All audio will be handled as stereo.
@@ -151,7 +151,7 @@ int audioCallback(const void *input, void *output,
     
     // Decode the number of samples that PortAudio said it needs to send to the 
     // soundcard. This is where we're grabbing audio from demo.mp3!
-    int samplesRead = pAudioDecoder->read(frameCount * NUM_CHANNELS,
+    int samplesRead = pAudioDecoder->read(frameCount * NUM_CHANNELS, 
                                           static_cast<SAMPLE*>(output));
     
     // IMPORTANT:

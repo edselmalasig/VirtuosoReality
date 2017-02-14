@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio
+# Install script for directory: C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/portaudio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/portaudio/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/portaudio/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

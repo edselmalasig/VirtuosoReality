@@ -159,6 +159,175 @@ VirtuosoReality::VirtuosoReality(int argc, char ** argv){
     this->init(argc, argv);
 }
 
+//-----------------------------------------------------------------------------
+// name: cb()
+// desc: audio callback
+//-----------------------------------------------------------------------------
+//int cb( char * buffer, int buffer_size, void * user_data )
+
+int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigned long numFrames,
+                        const PaStreamCallbackTimeInfo* timeinfo, PaStreamCallbackFlags statusFlags, void * userData )
+{
+    g_sf = static_cast<AudioDecoder *>(userData);
+    // Play it safe when debugging and coding, protect your ears by clearing
+    // the output buffer.
+    memset(outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(float));
+    
+    int temp;
+    
+    if (b_seek){
+        temp = g_position + g_sf->positionInSamples()+1;
+        g_sf->seek(temp);
+        samplesRead = temp;
+    }
+    else if (g_position < 0){
+        g_position = 0;
+        temp = g_position;
+        g_sf->seek(temp);
+        samplesRead = temp;
+    }
+    else{
+        temp = g_sf->positionInSamples();
+        g_sf->seek(temp);
+    }
+    
+    // Decode the number of samples that PortAudio said it needs to send to the
+    // soundcard.
+    
+    
+    g_mutex.lock();
+    
+    // freeze frame
+    if( g_freeze ) {
+        memset( outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(SAMPLE) );
+        g_ready = TRUE;
+        return 0;
+    }
+    
+    // check for restart
+    if( g_restart )
+    {
+        
+        // set playback position to begin
+        g_sf->seek( 0 );
+        g_wf_index = 0;
+        g_wf = 0;
+        g_starting = 1;
+        g_restart = FALSE;
+        // clear waveforms and waterfall and drawing booleans
+        for( GLint i = 0; i < g_wf_delay || i < g_depth; i++ )
+        {
+            if( i < g_wf_delay )
+                memset( g_waveforms[i], 0, g_buffer_size * 2 * sizeof(SAMPLE) );
+            if( i < g_depth )
+            {
+                memset( g_spectrums[i], 0, sizeof(Pt2D)*SND_FFT_SIZE );
+                g_draw[i] = false;
+            }
+        }
+        
+    }
+    
+    samplesRead += g_sf->read(numFrames * NUM_CHANNELS,
+                                 static_cast<SAMPLE*>(g_stereo_buffer));
+    
+    if( g_sf->channels() == 2 )
+    {
+        // convert stereo to mono
+        for( int i = 0; i < numFrames; i++)
+        {
+            g_audio_buffer[i] = g_stereo_buffer[i*2] + g_stereo_buffer[i*2+1];
+            g_audio_buffer[i] /= 2.0f;
+        }
+    }
+    else
+    {
+        // actually mono
+        memcpy( g_audio_buffer, g_stereo_buffer, numFrames * sizeof(SAMPLE) );
+        // convert mono to stereo
+        for( int i = 0; i < numFrames; i++ )
+        {
+            g_stereo_buffer[i*2] = g_stereo_buffer[i*2+1] = g_audio_buffer[i];
+        }
+    }
+    
+    // time-domain waterfall delay
+    if( g_waveforms != NULL )
+    {
+        // put current buffer in time-domain waterfall
+        memcpy( g_waveforms[g_wf_index], g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
+        // incrment index (this is also the index to copy out of)
+        g_wf_index = (GLint)((g_wf_index + 1.0f)) % (GLint)(g_wf_delay);
+        // copy delayed buffer out of time-domain waterfall
+        memcpy( g_stereo_buffer, g_waveforms[g_wf_index], numFrames * 2 * sizeof(SAMPLE) );
+    }
+    
+    // play stereo
+    memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
+    
+    // count
+    g_buffer_count_a++;
+    
+    // done...
+    
+    if( samplesRead > g_sf->numSamples()){
+        // done...
+        g_running = FALSE;
+        g_play = FALSE;
+        g_filename = "";
+        g_file_running = FALSE;
+        samplesRead = 0;
+        g_sf = NULL;
+        
+        // zero
+        memset( g_audio_buffer, 0, numFrames * sizeof(SAMPLE) );
+        // copy remaining delayed waveform buffers one by one
+        if( g_wf_delay )
+        {
+            memset( g_waveforms[g_wf_index], 0, numFrames * 2 * sizeof(SAMPLE) );
+            g_wf_index = (GLint)((g_wf_index + 1.0f)) % (GLint)(g_wf_delay);
+            memcpy( g_stereo_buffer, g_waveforms[g_wf_index], numFrames * 2 * sizeof(SAMPLE) );
+            memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
+        }
+        else
+            memset( outputBuffer, 0, 2 * numFrames * sizeof(SAMPLE) );
+        
+        if( Pa_StopStream( g_sf ) != paNoError ){
+            std::cerr << "Failed to stop stream." << std::endl;
+            
+        }
+        if (Pa_CloseStream(g_sf) != paNoError){
+            std::cerr << "Failed to close stream." << std::endl;
+        }
+        if(Pa_Terminate() != paNoError){
+            std::cerr << "Failed to terminate stream." << std::endl;
+        }else
+            std::cerr << "Stream terminated." << std::endl;
+        
+        b_seek = false;
+        g_ready = TRUE;
+        g_mutex.unlock();
+        delete g_sf;
+        std::cout << "*************** paComplete: " << paComplete << std::endl;
+        return 3;
+    }
+    
+    
+    b_seek = false;
+    // set flag
+    g_ready = TRUE;
+    // unlock
+    g_mutex.unlock();
+    /*
+     // mute the real-time audio
+     if( g_mute )
+     memset( outputBuffer, 0, numFrames * 2 * sizeof(SAMPLE) );
+     */
+    return paContinue;
+    
+}
+
+
 void VirtuosoReality::init(int argc, char ** argv){
     
     this->help();
@@ -635,173 +804,6 @@ void VirtuosoReality::usage()
     fprintf( stderr, "\n" );
 }
 
-//-----------------------------------------------------------------------------
-// name: cb()
-// desc: audio callback
-//-----------------------------------------------------------------------------
-//int cb( char * buffer, int buffer_size, void * user_data )
-
-int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigned long numFrames,
-                        const PaStreamCallbackTimeInfo* timeinfo, PaStreamCallbackFlags statusFlags, void * userData )
-{
-    g_sf = static_cast<AudioDecoder *>(userData);
-    // Play it safe when debugging and coding, protect your ears by clearing
-    // the output buffer.
-    memset(outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(float));
-    
-    int temp;
-    
-    if (b_seek){
-        temp = g_position + g_sf->positionInSamples()+1;
-        g_sf->seek(temp);
-        samplesRead = temp;
-    }
-    else if (g_position < 0){
-        g_position = 0;
-        temp = g_position;
-        g_sf->seek(temp);
-        samplesRead = temp;
-    }
-    else{
-        temp = g_sf->positionInSamples();
-        g_sf->seek(temp);
-    }
-    
-    // Decode the number of samples that PortAudio said it needs to send to the
-    // soundcard.
-    
-    
-    g_mutex.lock();
-    
-    // freeze frame
-    if( g_freeze ) {
-        memset( outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(SAMPLE) );
-        g_ready = TRUE;
-        return 0;
-    }
-    
-    // check for restart
-    if( g_restart )
-    {
-        
-        // set playback position to begin
-        g_sf->seek( 0 );
-        g_wf_index = 0;
-        g_wf = 0;
-        g_starting = 1;
-        g_restart = FALSE;
-        // clear waveforms and waterfall and drawing booleans
-        for( GLint i = 0; i < g_wf_delay || i < g_depth; i++ )
-        {
-            if( i < g_wf_delay )
-                memset( g_waveforms[i], 0, g_buffer_size * 2 * sizeof(SAMPLE) );
-            if( i < g_depth )
-            {
-                memset( g_spectrums[i], 0, sizeof(Pt2D)*SND_FFT_SIZE );
-                g_draw[i] = false;
-            }
-        }
-        
-    }
-    
-    samplesRead += g_sf->read(numFrames * NUM_CHANNELS,
-                                 static_cast<SAMPLE*>(g_stereo_buffer));
-    
-    if( g_sf->channels() == 2 )
-    {
-        // convert stereo to mono
-        for( int i = 0; i < numFrames; i++)
-        {
-            g_audio_buffer[i] = g_stereo_buffer[i*2] + g_stereo_buffer[i*2+1];
-            g_audio_buffer[i] /= 2.0f;
-        }
-    }
-    else
-    {
-        // actually mono
-        memcpy( g_audio_buffer, g_stereo_buffer, numFrames * sizeof(SAMPLE) );
-        // convert mono to stereo
-        for( int i = 0; i < numFrames; i++ )
-        {
-            g_stereo_buffer[i*2] = g_stereo_buffer[i*2+1] = g_audio_buffer[i];
-        }
-    }
-    
-    // time-domain waterfall delay
-    if( g_waveforms != NULL )
-    {
-        // put current buffer in time-domain waterfall
-        memcpy( g_waveforms[g_wf_index], g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
-        // incrment index (this is also the index to copy out of)
-        g_wf_index = (GLint)((g_wf_index + 1.0f)) % (GLint)(g_wf_delay);
-        // copy delayed buffer out of time-domain waterfall
-        memcpy( g_stereo_buffer, g_waveforms[g_wf_index], numFrames * 2 * sizeof(SAMPLE) );
-    }
-    
-    // play stereo
-    memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
-    
-    // count
-    g_buffer_count_a++;
-    
-    // done...
-    
-    if( samplesRead > g_sf->numSamples()){
-        // done...
-        g_running = FALSE;
-        g_play = FALSE;
-        g_filename = "";
-        g_file_running = FALSE;
-        samplesRead = 0;
-        g_sf = NULL;
-        
-        // zero
-        memset( g_audio_buffer, 0, numFrames * sizeof(SAMPLE) );
-        // copy remaining delayed waveform buffers one by one
-        if( g_wf_delay )
-        {
-            memset( g_waveforms[g_wf_index], 0, numFrames * 2 * sizeof(SAMPLE) );
-            g_wf_index = (GLint)((g_wf_index + 1.0f)) % (GLint)(g_wf_delay);
-            memcpy( g_stereo_buffer, g_waveforms[g_wf_index], numFrames * 2 * sizeof(SAMPLE) );
-            memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
-        }
-        else
-            memset( outputBuffer, 0, 2 * numFrames * sizeof(SAMPLE) );
-        
-        if( Pa_StopStream( g_sf ) != paNoError ){
-            std::cerr << "Failed to stop stream." << std::endl;
-            
-        }
-        if (Pa_CloseStream(g_sf) != paNoError){
-            std::cerr << "Failed to close stream." << std::endl;
-        }
-        if(Pa_Terminate() != paNoError){
-            std::cerr << "Failed to terminate stream." << std::endl;
-        }else
-            std::cerr << "Stream terminated." << std::endl;
-        
-        b_seek = false;
-        g_ready = TRUE;
-        g_mutex.unlock();
-        delete g_sf;
-        std::cout << "*************** paComplete: " << paComplete << std::endl;
-        return 3;
-    }
-    
-    
-    b_seek = false;
-    // set flag
-    g_ready = TRUE;
-    // unlock
-    g_mutex.unlock();
-    /*
-     // mute the real-time audio
-     if( g_mute )
-     memset( outputBuffer, 0, numFrames * 2 * sizeof(SAMPLE) );
-     */
-    return paContinue;
-    
-}
 
 
 //-----------------------------------------------------------------------------

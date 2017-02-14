@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\076ef5fbef10556e057477c6cf18c51a\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\34c9d641805a9b2c302ae2d132307c80\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{C4C1FBAD-B2E9-3810-9DB9-8AFBD4505CF8}</UniqueIdentifier>
+      <UniqueIdentifier>{F2792B2B-E8F5-3153-BA32-B1F198778163}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

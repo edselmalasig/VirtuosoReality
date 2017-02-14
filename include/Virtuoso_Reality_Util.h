@@ -15,10 +15,10 @@
 // process related
 #if defined(__OS_WINDOWS__)
 #include <process.h>
+#endif
 // usleep
 #ifndef usleep
 #define usleep(x) Sleep( (x/1000 <= 0 ? 1 : x/1000) )
-#endif
 #else
 #include <unistd.h>
 #endif
@@ -31,8 +31,10 @@
 #include <OpenGL/glu.h>
 #include <GLUT/glut.h>
 #else
-#include <GL/glut.h>
+#include <GL/glew.h>
 #include <GL/gl.h>
+
+#include <GL/glut.h>
 #include <GL/glu.h>
 #endif
 #include <GLFW/glfw3.h>
@@ -59,7 +61,7 @@
  #endif
  */
 
-#include "util_sndfile.h"
+//#include "util_sndfile.h"
 
 // STK
 #include "Thread.h"

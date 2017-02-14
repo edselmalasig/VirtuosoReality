@@ -48,14 +48,14 @@
 
 #include "audiodecoderbase.h"
 
-//#include <AudioToolbox/AudioToolbox.h>
-//#include "apple/CAStreamBasicDescription.h"
+#include <AudioToolbox/AudioToolbox.h>
+#include "apple/CAStreamBasicDescription.h"
 
 #if !defined(__COREAUDIO_USE_FLAT_INCLUDES__)
-//#include <CoreServices/CoreServices.h>
-//#include <CoreAudio/CoreAudioTypes.h>
-//#include <AudioToolbox/AudioFile.h>
-//#include <AudioToolbox/AudioFormat.h>
+#include <CoreServices/CoreServices.h>
+#include <CoreAudio/CoreAudioTypes.h>
+#include <AudioToolbox/AudioFile.h>
+#include <AudioToolbox/AudioFormat.h>
 #else
 #include "CoreAudioTypes.h"
 #include "AudioFile.h"

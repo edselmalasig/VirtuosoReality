@@ -39,14 +39,14 @@
 
 #ifndef __AUDIODECODERBASE_H__
 #define __AUDIODECODERBASE_H__
-#pragma comment(lib, "audiodecoder.lib")
+
 #include <string>
 #include <vector>
 
 #ifdef _WIN32
-//#define DllExport   __declspec( dllexport )
-//#else
-//#define DllExport
+#define DllExport   __declspec( dllexport )
+#else
+#define DllExport
 #endif
 
 //Types
@@ -62,7 +62,7 @@ At present, all API calls are blocking and none are considered real-time safe. F
 try to avoid calling read() or any other libaudiodecoder function from inside your audio callback.
 */
 
-class AudioDecoderBase
+class DllExport AudioDecoderBase
 {
     public:
         AudioDecoderBase(const std::string filename);

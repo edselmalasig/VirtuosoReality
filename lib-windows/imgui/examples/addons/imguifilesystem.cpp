@@ -544,10 +544,10 @@ namespace ImGuiFs {
         
         inline static void Create(const char* directoryName)   {
 #       ifndef _WIN32
-            const mode_t mode = S_IFDIR | S_IREAD | S_IWRITE | S_IRWXU | S_IRWXG | S_IRWXO;
-            mkdir(directoryName,mode);
+            //const mode_t mode = S_IFDIR | S_IREAD | S_IWRITE | S_IRWXU | S_IRWXG | S_IRWXO;
+            mkdir(directoryName,S_IRWXO);
 #       else //_WIN32
-            static wchar_t name[PATH_MAX+1];
+            wchar_t name[220];
             String::utf8_to_wide(directoryName,name);
             ::CreateDirectoryW(name,NULL);
 #       endif //_WIN32

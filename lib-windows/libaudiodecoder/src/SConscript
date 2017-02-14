@@ -13,6 +13,11 @@ debug = False
 if int(ARGUMENTS.get('debug', 0)):
     debug = True 
 
+
+win_msvc_version = ARGUMENTS.get('msvc_version', '14.0')
+win_target_arch = ARGUMENTS.get('target_arch', 'x86')
+vista_compatible = int(ARGUMENTS.get('vista_compatible', False))==1
+
 if sys.platform == 'darwin':
     platform_is_macosx = True
 elif sys.platform == 'win32':
@@ -26,9 +31,9 @@ if platform_is_macosx or platform_is_linux:
     install_headers_dir = install_root + "/include/" + project_name    
 else:
     if debug:
-        install_root = './debug'
+        install_root = '#../beatcleaver-winlib/win32lib-msvc90-debug'
     else:
-        install_root = './release'
+        install_root = '#../beatcleaver-winlib/win32lib-msvc90-release'
     #install_root = 'C:/libaudiodecoder/examples/msvc2008_demo/Debug'
     install_lib_dir     = install_root;
     install_headers_dir = install_root + "/" + project_name    
@@ -37,6 +42,13 @@ else:
 tools = ['default']
 toolpath = ['#build/']
 extra_arguments = {}
+
+if platform_is_windows:
+    extra_arguments.update({
+        'MSVC_VERSION': win_msvc_version,
+        'TARGET_ARCH': win_target_arch
+    })
+
 
 env = Script.Environment(tools=tools, toolpath=toolpath, ENV=os.environ,
                               **extra_arguments)
@@ -54,9 +66,18 @@ if os.environ.has_key('CXXFLAGS'):
     env['CXXFLAGS'] += SCons.Util.CLVar(os.environ['CXXFLAGS'])
 if os.environ.has_key('LDFLAGS'):
     env['LINKFLAGS'] += SCons.Util.CLVar(os.environ['LDFLAGS'])
+# Pull in the paths set by vsvarsall.bat or vcvars32.bat on Windows:
+if os.environ.has_key('LIBPATH'):
+    env.Append(LIBPATH = os.environ['LIBPATH'].split(';'))
+if os.environ.has_key('INCLUDE'):
+    env.Append(CPPPATH = os.environ['INCLUDE'].split(';'))
+
+# XXX: If there's ever an issue with these path strings being too long, you can shorten them with win32api.GetShortPathName()
+
 
 # Setup source and include paths
 env.Append(CPPPATH= ['#src', '#include'])
+
 
 # General C++ compiler flags
 if platform_is_linux or platform_is_macosx:
@@ -71,9 +92,6 @@ if platform_is_macosx:
     env.Append(CPPPATH='#include/apple/')
     env.Append(LINKFLAGS='-framework AudioToolbox -framework CoreFoundation')
 
-if platform_is_windows:
-    env.Append(LIBPATH='C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v7.1A\\Lib')
-    env.Append(CPPPATH='C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v7.1A\\Include')
 
 if not env.GetOption('clean') and not SCons.Util.containsAny(os.sys.argv, ['-h', '--help']):
     conf = Configure(env)
@@ -86,12 +104,20 @@ if not env.GetOption('clean') and not SCons.Util.containsAny(os.sys.argv, ['-h',
     # See: http://msdn.microsoft.com/en-us/library/windows/desktop/ee663600(v=vs.85).aspx#LibraryChangesWin7
     if platform_is_windows:
         wmfError = 'Did not find Windows Media Foundation .lib files. Do you have the Windows 7 Platform SDK installed?';
-        if not conf.CheckLib('C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v7.1A\\Lib\\Mf_vista.lib'):
-            print wmfError
-            Exit(1)
-        if not conf.CheckLib('Mfplat_vista'):
-            print wmfError
-            Exit(1)
+        if vista_compatible:
+            if not conf.CheckLib('Mf_vista'):
+                print wmfError
+                Exit(1)
+            if not conf.CheckLib('Mfplat_vista'):
+                print wmfError
+                Exit(1)
+        else:
+            if not conf.CheckLib('Mf'):
+                print wmfError
+                Exit(1)
+            if not conf.CheckLib('Mfplat'):
+                print wmfError
+                Exit(1)
         if not conf.CheckLib('mfreadwrite'):
             print wmfError
             Exit(1)

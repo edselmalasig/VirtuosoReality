@@ -1,0 +1,23 @@
+﻿  Building Custom Rule C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/portaudio/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\portaudio\build\CMakeFiles\generate.stamp is up-to-date.
+  pa_allocation.c
+  pa_converters.c
+  pa_cpuload.c
+  pa_debugprint.c
+  pa_dither.c
+  pa_front.c
+  pa_process.c
+  pa_ringbuffer.c
+  pa_stream.c
+  pa_trace.c
+  pa_hostapi_skeleton.c
+  pa_win_hostapis.c
+  pa_win_util.c
+  pa_win_waveformat.c
+  pa_win_wdmks_utils.c
+  pa_win_coinitialize.c
+  pa_x86_plain_converters.c
+  pa_win_wmme.c
+  pa_win_wdmks.c
+  Generating Code...
+  portaudio_static.vcxproj -> C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\portaudio\build\Debug\portaudio_static_x86.lib

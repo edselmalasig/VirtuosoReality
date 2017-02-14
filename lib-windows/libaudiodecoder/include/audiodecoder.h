@@ -45,13 +45,14 @@
 #ifdef _WIN32 //Always defined on both Win32 and Win64 - http://msdn.microsoft.com/en-us/library/b0084kay(v=vs.80).aspx
 #include "audiodecodermediafoundation.h"
 
-class /*DllExport*/ AudioDecoder : public AudioDecoderMediaFoundation
+class DllExport AudioDecoder : public AudioDecoderMediaFoundation
 {
     public:
         AudioDecoder(const std::string filename) : AudioDecoderMediaFoundation(filename) {};
-	private:
-		AudioDecoder(const AudioDecoder& that);
-		AudioDecoder& operator=(AudioDecoder const&);
+    private:
+        //Disable copy constructor and assignment operator
+        AudioDecoder(const AudioDecoder& that);
+        AudioDecoder& operator=(AudioDecoder const&);
 };
 
 #elif __APPLE__
@@ -60,6 +61,10 @@ class AudioDecoder : public AudioDecoderCoreAudio
 {
     public:
         AudioDecoder(const std::string filename) : AudioDecoderCoreAudio(filename) {};
+    private:
+        //Disable copy constructor and assignment operator
+        AudioDecoder(const AudioDecoder& that);
+        AudioDecoder& operator=(AudioDecoder const&);
 };
 #endif
 

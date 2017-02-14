@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{5E02F8DB-5233-3BF3-BEF9-334884BBDAA5}</ProjectGUID>
+    <ProjectGUID>{C419664D-4C45-3B0E-BE70-AE34A076D0A9}</ProjectGUID>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -30,25 +30,25 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">glfw.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">glfw3</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">glfw.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">glfw3</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">glfw.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">glfw3</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">glfw.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">glfw3</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
@@ -86,7 +86,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -103,10 +103,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_GLFW_USE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";glfw_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -119,8 +119,8 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>Debug</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Debug/glfw3dll.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Debug/glfw3.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Debug/glfw3dll.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Debug/glfw3.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -146,10 +146,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLFW_USE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";glfw_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -162,8 +162,8 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>No</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Release/glfw3dll.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Release/glfw3.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Release/glfw3dll.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/Release/glfw3.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -173,7 +173,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -189,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLFW_USE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";glfw_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -205,8 +205,8 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>No</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/MinSizeRel/glfw3dll.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/MinSizeRel/glfw3.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/MinSizeRel/glfw3dll.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/MinSizeRel/glfw3.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -216,7 +216,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -232,10 +232,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLFW_USE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";glfw_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -248,8 +248,8 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>Debug</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/RelWithDebInfo/glfw3dll.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/RelWithDebInfo/glfw3.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/RelWithDebInfo/glfw3dll.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/src/RelWithDebInfo/glfw3.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -258,10 +258,10 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -269,12 +269,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -282,12 +282,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -295,12 +295,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1 -BC:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build --check-stamp-file C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -308,38 +308,38 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/src/CMakeLists.txt;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\internal.h" />
-    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\glfw_config.h" />
-    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include\GLFW\glfw3.h" />
-    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\include\GLFW\glfw3native.h" />
-    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_platform.h" />
-    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_joystick.h" />
-    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\wgl_context.h" />
-    <ClInclude Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\egl_context.h" />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\context.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\init.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\input.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\monitor.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\vulkan.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\window.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_init.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_joystick.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_monitor.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_time.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_tls.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_window.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\wgl_context.c"  />
-    <ClCompile Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\egl_context.c"  />
+    <ClInclude Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\internal.h" />
+    <ClInclude Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\src\glfw_config.h" />
+    <ClInclude Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include\GLFW\glfw3.h" />
+    <ClInclude Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\include\GLFW\glfw3native.h" />
+    <ClInclude Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_platform.h" />
+    <ClInclude Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_joystick.h" />
+    <ClInclude Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\wgl_context.h" />
+    <ClInclude Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\egl_context.h" />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\context.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\init.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\input.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\monitor.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\vulkan.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\window.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_init.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_joystick.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_monitor.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_time.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_tls.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\win32_window.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\wgl_context.c"  />
+    <ClCompile Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\src\egl_context.c"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/ZERO_CHECK.vcxproj">
-      <Project>9CF4AD01-B1F2-3E2B-9C4B-8C2295A4D271</Project>
+    <ProjectReference Include="C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/ZERO_CHECK.vcxproj">
+      <Project>F03978A5-6F1D-377E-8F1D-748DAF8617F1</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

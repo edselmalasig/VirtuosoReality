@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\d2e71ebdb7df5df9ab333b7899edd370\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\874c5bfe90b85cf2bcf5fd2165ab77d5\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{FABACFC5-67D1-3942-9A9B-162055A53CDC}</UniqueIdentifier>
+      <UniqueIdentifier>{F2ABCAD6-CACA-3779-9DBB-8CF396EDBBD8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

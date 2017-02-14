@@ -6,129 +6,117 @@ Id flags:
 
 The output was:
 0
-Microsoft (R) Build Engine version 14.0.25420.1
+Microsoft (R) Build Engine version 15.1.523.56541
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 2/4/2017 2:31:08 PM.
-The target "_ConvertPdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)" does not exist in the project, and will be ignored.
-The target "_CollectPdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)" does not exist in the project, and will be ignored.
-The target "_CollectMdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)" does not exist in the project, and will be ignored.
-The target "_CopyMdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,71)" does not exist in the project, and will be ignored.
-Project "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+Build started 2/13/2017 4:06:33 PM.
+Project "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.7.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdC.tlog\".
 InitializeBuildStatus:
   Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.24911\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
   CMakeCCompilerId.c
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CompilerIdC\.\CompilerIdC.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.24911\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.7.2\CompilerIdC\.\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
-  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\cl.exe
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.24911\bin\HostX86\x86\cl.exe
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.6.3\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+Done Building Project "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\3.7.2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:06.43
+Time Elapsed 00:00:01.37
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/3.6.3/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/3.7.2/CompilerIdC/CompilerIdC.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_eca05.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
-Microsoft (R) Build Engine version 14.0.25420.1
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_ad7a5.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine version 15.1.523.56541
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 2/4/2017 2:31:16 PM.
-The target "_ConvertPdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)" does not exist in the project, and will be ignored.
-The target "_CollectPdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)" does not exist in the project, and will be ignored.
-The target "_CollectMdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)" does not exist in the project, and will be ignored.
-The target "_CopyMdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,71)" does not exist in the project, and will be ignored.
-Project "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\cmTC_eca05.vcxproj" on node 1 (default targets).
+Build started 2/13/2017 4:06:35 PM.
+Project "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\cmTC_ad7a5.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_eca05.dir\Debug\".
-  Creating directory "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_eca05.dir\Debug\cmTC_eca05.tlog\".
+  Creating directory "cmTC_ad7a5.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_ad7a5.dir\Debug\cmTC_ad7a5.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_eca05.dir\Debug\cmTC_eca05.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_ad7a5.dir\Debug\cmTC_ad7a5.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_eca05.dir\Debug\\" /Fd"cmTC_eca05.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\testCCompiler.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.24911\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ad7a5.dir\Debug\\" /Fd"cmTC_ad7a5.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.10.24911 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_eca05.dir\Debug\\" /Fd"cmTC_eca05.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ad7a5.dir\Debug\\" /Fd"cmTC_ad7a5.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\testCCompiler.c"
   testCCompiler.c
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\cmTC_eca05.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp/Debug/cmTC_eca05.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp/Debug/cmTC_eca05.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_eca05.dir\Debug\testCCompiler.obj
-  cmTC_eca05.vcxproj -> C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\cmTC_eca05.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.24911\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\cmTC_ad7a5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp/Debug/cmTC_ad7a5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp/Debug/cmTC_ad7a5.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ad7a5.dir\Debug\testCCompiler.obj
+  cmTC_ad7a5.vcxproj -> C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\cmTC_ad7a5.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_eca05.dir\Debug\cmTC_eca05.tlog\unsuccessfulbuild".
-  Touching "cmTC_eca05.dir\Debug\cmTC_eca05.tlog\cmTC_eca05.lastbuildstate".
-Done Building Project "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\cmTC_eca05.vcxproj" (default targets).
+  Deleting file "cmTC_ad7a5.dir\Debug\cmTC_ad7a5.tlog\unsuccessfulbuild".
+  Touching "cmTC_ad7a5.dir\Debug\cmTC_ad7a5.tlog\cmTC_ad7a5.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\cmTC_ad7a5.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.81
+Time Elapsed 00:00:01.03
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_33d5f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
-Microsoft (R) Build Engine version 14.0.25420.1
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_b06be.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine version 15.1.523.56541
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 2/4/2017 2:31:18 PM.
-The target "_ConvertPdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)" does not exist in the project, and will be ignored.
-The target "_CollectPdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)" does not exist in the project, and will be ignored.
-The target "_CollectMdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)" does not exist in the project, and will be ignored.
-The target "_CopyMdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,71)" does not exist in the project, and will be ignored.
-Project "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\cmTC_33d5f.vcxproj" on node 1 (default targets).
+Build started 2/13/2017 4:06:36 PM.
+Project "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\cmTC_b06be.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_33d5f.dir\Debug\".
-  Creating directory "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_33d5f.dir\Debug\cmTC_33d5f.tlog\".
+  Creating directory "cmTC_b06be.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_b06be.dir\Debug\cmTC_b06be.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_33d5f.dir\Debug\cmTC_33d5f.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_b06be.dir\Debug\cmTC_b06be.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_33d5f.dir\Debug\\" /Fd"cmTC_33d5f.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCCompilerABI.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.24911\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b06be.dir\Debug\\" /Fd"cmTC_b06be.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.10.24911 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_33d5f.dir\Debug\\" /Fd"cmTC_33d5f.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCCompilerABI.c"
-  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b06be.dir\Debug\\" /Fd"cmTC_b06be.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
   CMakeCCompilerABI.c
+  
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\cmTC_33d5f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp/Debug/cmTC_33d5f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp/Debug/cmTC_33d5f.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_33d5f.dir\Debug\CMakeCCompilerABI.obj
-  cmTC_33d5f.vcxproj -> C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\cmTC_33d5f.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.24911\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\cmTC_b06be.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp/Debug/cmTC_b06be.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/Github/Virtuoso_Reality/lib-windows/glfw-3.2.1/build/CMakeFiles/CMakeTmp/Debug/cmTC_b06be.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b06be.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_b06be.vcxproj -> C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\Debug\cmTC_b06be.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_33d5f.dir\Debug\cmTC_33d5f.tlog\unsuccessfulbuild".
-  Touching "cmTC_33d5f.dir\Debug\cmTC_33d5f.tlog\cmTC_33d5f.lastbuildstate".
-Done Building Project "C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\cmTC_33d5f.vcxproj" (default targets).
+  Deleting file "cmTC_b06be.dir\Debug\cmTC_b06be.tlog\unsuccessfulbuild".
+  Touching "cmTC_b06be.dir\Debug\cmTC_b06be.tlog\cmTC_b06be.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\Github\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\CMakeTmp\cmTC_b06be.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.14
+Time Elapsed 00:00:00.74
 
 
