@@ -134,7 +134,6 @@ GLboolean VirtuosoReality::g_file_running = false;
 VirtuosoReality::VirtuosoReality(int argc, char ** argv){
     ws = new WindowingSystem();
     
-    
     g_wf_delay = (GLuint)(g_depth * g_wf_delay_ratio + .5f);
     g_depth = 48;
     g_buffer_size = SND_BUFFER_SIZE;
@@ -447,6 +446,9 @@ void VirtuosoReality::init(int argc, char ** argv){
                 fprintf( stderr, "[Virtuoso Reality]: unrecognized option '%s'...\n", argv[i] );
                 usage();
             }
+
+            g_filename = string(argv[1]);
+            g_file_running = false;
         }
         else
         {
@@ -457,12 +459,14 @@ void VirtuosoReality::init(int argc, char ** argv){
             }
             
             // reading from file...
-            //g_filename = argv[1];
+            g_filename = string(argv[1]);
+            g_file_running = false;
             
             g_sndout = 2;
             g_starting = 1;
         }
     }
+    glutInit( &argc, argv );
     ImGui_ImplGlfw_Init(ws->window, true);
     glfwMakeContextCurrent(ws->window);
     glfwSetCursorPosCallback( ws->window, (GLFWcursorposfun)mouseFunc );
@@ -477,6 +481,7 @@ void VirtuosoReality::init(int argc, char ** argv){
 }
 
 void VirtuosoReality::run(){
+    std::cout << "run" << std::endl;
     while(g_running){
         this->avrLoop();
     }
@@ -511,6 +516,12 @@ void VirtuosoReality::avrLoop(){
                 continue;
             }
         }
+        if(!g_filename.empty() && !g_file_running){
+            g_file_running = true;
+            this->initialize_graphics();
+            this->initialize_audio();
+            
+        }
         /*
         if(!g_filename.empty() && !g_file_running){
             audio_play_done = initialize_audio();
@@ -543,42 +554,41 @@ void VirtuosoReality::showUI(){
         static float f = 0.0f;
         ImGui::Text("Virtuoso Reality - from sndpeek");
         if (ImGui::Button("Demo Window")) show_demo_window ^= 1;
-        if (ImGui::Button("File Chooser Window")){ show_fchooser_window ^= 1;  dlg = new ImGuiFs::Dialog;};
+        if (ImGui::Button("File Chooser Window")){ show_fchooser_window ^= 1;};
         if (ImGui::Button("Help Window")) show_help_window ^= 1;
         if (ImGui::Button("About")) show_about_window ^= 1;
         //if (ImGui::Button("Status Window")) show_stat_window ^= 1;
         ImGui::End();
     }
-
+    
     // 2. Show another simple window, this time using an explicit Begin/End pair
     if (show_fchooser_window)
     {
+        static ImGuiFs::Dialog dlg;
         ImGui::SetNextWindowSize(ImVec2(200,100), ImGuiSetCond_FirstUseEver);
         ImGui::Begin("File Chooser", &show_fchooser_window);
-        
 
         browseButtonPressed = ImGui::Button("Choose [a] file[s] ...");  // we need a trigger boolean variable
                                      // one per dialog (and must be static)
-        dlg->chooseFileDialog(browseButtonPressed);              // see other dialog types and the full list of arguments for advanced usage
+        
+        dlg.chooseFileDialog(browseButtonPressed);              // see other dialog types and the full list of arguments for advanced usage
         
         if (browseButtonPressed) {
-            ImGui::Text("Chosen file: \"%s\"",dlg->getChosenPath());
+            ImGui::Text("Chosen file: \"%s\"",dlg.getChosenPath());
         }
         
         // If you want to copy the (valid) returned path somewhere, you can use something like:
         //static char myPath[ImGuiFs::MAX_PATH_BYTES];
-        if (strlen(dlg->getChosenPath())>0 && strlen(musicPath) == 0) {
-            strcpy(musicPath,dlg->getChosenPath());
-            ImGui::Text("Chosen file: \"%s\"",dlg->getChosenPath());
+        if (strlen(dlg.getChosenPath())>0 && strlen(musicPath) == 0) {
+            strcpy(musicPath,dlg.getChosenPath());
+            ImGui::Text("Chosen file: \"%s\"",dlg.getChosenPath());
             
             string str(musicPath);
             g_filename = str;
             std::cout << musicPath << " : " << g_filename << std::endl;
             browseButtonPressed = !browseButtonPressed;
             show_fchooser_window = !show_fchooser_window;
-            delete dlg;
-            this->initialize_graphics();
-            this->initialize_audio();
+            
         }
         
         // If you want to copy the (valid) returned path somewhere, you can use something like:
@@ -836,7 +846,7 @@ bool VirtuosoReality::initialize_audio( )
     {
         fprintf( stderr, "[Virtuoso Reality]: opening %s...\n", g_filename.c_str() );
         // attempt to open file
-        g_sf = new AudioDecoder(musicPath);
+        g_sf = new AudioDecoder(g_filename.c_str());
         if (g_sf->open() != AUDIODECODER_OK)
         {
             std::cout << "Failed to open " << g_filename << std::endl;

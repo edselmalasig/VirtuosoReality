@@ -13,9 +13,10 @@
 // 3. This notice may not be removed or altered from any source distribution.
 
 #include "imguifilesystem.h"
-
+#include <experimental/filesystem>
 #ifdef _WIN32
 #include <shlobj.h> // Known Directory locations
+#include <windows.h>
 #   ifndef CSIDL_MYPICTURES
 #       define CSIDL_MYPICTURES 0x0027
 #   endif //CSIDL_MYPICTURES
@@ -39,7 +40,6 @@
 
 
 namespace ImGuiFs {
-#define PATH_MAX FILENAME_MAX;
     const int MAX_FILENAME_BYTES = FILENAME_MAX;
     const int MAX_PATH_BYTES = PATH_MAX;
     enum Sorting {
@@ -544,10 +544,11 @@ namespace ImGuiFs {
         
         inline static void Create(const char* directoryName)   {
 #       ifndef _WIN32
-            //const mode_t mode = S_IFDIR | S_IREAD | S_IWRITE | S_IRWXU | S_IRWXG | S_IRWXO;
-            mkdir(directoryName,S_IRWXO);
+            const mode_t mode = S_IFDIR | S_IREAD | S_IWRITE | S_IRWXU | S_IRWXG | S_IRWXO;
+            mkdir(directoryName,mode);
 #       else //_WIN32
-            wchar_t name[220];
+            const int tt = PATH_MAX+1;
+            wchar_t name[tt];
             String::utf8_to_wide(directoryName,name);
             ::CreateDirectoryW(name,NULL);
 #       endif //_WIN32

@@ -54,7 +54,7 @@
 
 //Force MSVC to generate a .lib file with /implib but without a .def file
 //http://msdn.microsoft.com/en-us/library/67wc07b9(v=vs.80).aspx
-DllExport int AudioDecoderMediaFoundation = 1;
+//DllExport int AudioDecoderMediaFoundation = 1;
 
 class IMFSourceReader;
 class IMFMediaType;

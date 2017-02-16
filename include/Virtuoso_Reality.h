@@ -3,6 +3,7 @@
 
 #include "Virtuoso_Reality_Util.h"
 #include "Windowing_System.h"
+#include "dirent_portable.h"
 #include <ctype.h>
     //-----------------------------------------------------------------------------
     // global variables and #defines
@@ -15,7 +16,7 @@
 #define SND_MARSYAS_SIZE        ( 512 )
 #define INC_VAL_MOUSE           1.0f
 #define INC_VAL_KB              .025f
-
+#define MAX_PATH_BYTES          PATH_MAX
 class VirtuosoReality{
     //-----------------------------------------------------------------------------
     // function prototypes
@@ -36,15 +37,14 @@ public:
     static SAMPLE g_stereo_buffer[SND_BUFFER_SIZE*2]; // current stereo buffer (now
     static GLint g_buffer_size; // = SND_BUFFER_SIZE;
     static int samplesRead;
+      
     void showUI();
     void init(int argc, char ** argv);
     void run();
     void avrLoop();
-    
-#define MAX_PATH_BYTES 2048
     char musicPath[MAX_PATH_BYTES];
     bool browseButtonPressed = false;
-    ImGuiFs::Dialog  * dlg;
+   
     bool show_demo_window = false;
     bool show_fchooser_window = false;
     bool show_help_window = false;
