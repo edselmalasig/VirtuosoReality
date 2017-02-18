@@ -130,6 +130,7 @@ bool VirtuosoReality::g_play = false;
 float VirtuosoReality::t = 0;
 int VirtuosoReality::samplesRead = 0;
 GLboolean VirtuosoReality::g_file_running = false;
+int VirtuosoReality::out_numframes = 0;
 
 VirtuosoReality::VirtuosoReality(int argc, char ** argv){
     ws = new WindowingSystem();
@@ -173,7 +174,7 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     memset(outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(float));
     
     int temp;
-    
+    out_numframes = numFrames;
     if (b_seek){
         temp = g_position + g_sf->positionInSamples()+1;
         g_sf->seek(temp);
@@ -269,7 +270,7 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     
     // done...
     
-    if( samplesRead > g_sf->numSamples()){
+    if( samplesRead > g_sf->numSamples() ){
         // done...
         g_running = FALSE;
         g_play = FALSE;
@@ -447,7 +448,8 @@ void VirtuosoReality::init(int argc, char ** argv){
                 usage();
             }
 
-            g_filename = string(argv[1]);
+            //g_filename = string(argv[1]);
+            g_filename = argv[1];
             g_file_running = false;
         }
         else
@@ -459,7 +461,10 @@ void VirtuosoReality::init(int argc, char ** argv){
             }
             
             // reading from file...
-            g_filename = string(argv[1]);
+            //g_filename = string(argv[1]);
+            
+            g_filename = argv[1];
+
             g_file_running = false;
             
             g_sndout = 2;
@@ -482,6 +487,8 @@ void VirtuosoReality::init(int argc, char ** argv){
 
 void VirtuosoReality::run(){
     std::cout << "run" << std::endl;
+    this->initialize_audio();
+
     while(g_running){
         this->avrLoop();
     }
@@ -510,18 +517,20 @@ void VirtuosoReality::avrLoop(){
         if(showui){
             this->showUI();
             ImGui::Render();
+            /*
             if(g_filename.empty()){
                 glfwPollEvents();
                 glfwSwapBuffers(ws->window);
                 continue;
             }
+            */
         }
-        if(!g_filename.empty() && !g_file_running){
-            g_file_running = true;
-            this->initialize_graphics();
-            this->initialize_audio();
+        //if(!g_filename.empty()){// && !g_file_running)
+            //g_file_running = true;
+            //this->initialize_graphics();
             
-        }
+            
+        //}
         /*
         if(!g_filename.empty() && !g_file_running){
             audio_play_done = initialize_audio();
@@ -846,7 +855,7 @@ bool VirtuosoReality::initialize_audio( )
     {
         fprintf( stderr, "[Virtuoso Reality]: opening %s...\n", g_filename.c_str() );
         // attempt to open file
-        g_sf = new AudioDecoder(g_filename.c_str());
+        g_sf = new AudioDecoder(g_filename);
         if (g_sf->open() != AUDIODECODER_OK)
         {
             std::cout << "Failed to open " << g_filename << std::endl;
