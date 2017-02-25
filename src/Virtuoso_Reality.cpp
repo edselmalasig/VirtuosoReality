@@ -269,8 +269,8 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     g_buffer_count_a++;
     
     // done...
-    
-    if( samplesRead > g_sf->numSamples() ){
+    //std::cout << "samplesRead : numSamples" << " " << samplesRead << " : " << g_sf->numSamples() << std::endl;
+    if( samplesRead >= g_sf->numSamples() ){
         // done...
         g_running = FALSE;
         g_play = FALSE;
@@ -308,7 +308,7 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
         g_ready = TRUE;
         g_mutex.unlock();
         delete g_sf;
-        std::cout << "*************** paComplete: " << paComplete << std::endl;
+        std::cout << "***************\n***************\n***************\n paComplete: " << paComplete << std::endl;
         return 3;
     }
     
@@ -448,8 +448,7 @@ void VirtuosoReality::init(int argc, char ** argv){
                 usage();
             }
 
-            //g_filename = string(argv[1]);
-            g_filename = argv[1];
+            //g_filename = argv[1];
             g_file_running = false;
         }
         else
@@ -459,11 +458,6 @@ void VirtuosoReality::init(int argc, char ** argv){
                 fprintf( stderr, "[Virtuoso Reality]: multiple filenames specified...\n" );
                 usage();
             }
-            
-            // reading from file...
-            //g_filename = string(argv[1]);
-            
-            g_filename = argv[1];
 
             g_file_running = false;
             
@@ -487,7 +481,7 @@ void VirtuosoReality::init(int argc, char ** argv){
 
 void VirtuosoReality::run(){
     std::cout << "run" << std::endl;
-    this->initialize_audio();
+    //this->initialize_audio();
 
     while(g_running){
         this->avrLoop();
@@ -499,7 +493,7 @@ void VirtuosoReality::avrLoop(){
     int display_w;
     int display_h;
     int show_display = false;
-    int audio_play_done = 0;
+    bool audio_play = false;
     int count;
     while( !glfwWindowShouldClose(ws->window) )
     {
@@ -517,37 +511,21 @@ void VirtuosoReality::avrLoop(){
         if(showui){
             this->showUI();
             ImGui::Render();
-            /*
+            
             if(g_filename.empty()){
                 glfwPollEvents();
                 glfwSwapBuffers(ws->window);
                 continue;
+            }else if(!audio_play){
+                audio_play = this->initialize_audio();
+                g_file_running = true;
+            }else{
+                this->displayFunc();
+                show_display = g_running;
             }
-            */
+            
         }
-        //if(!g_filename.empty()){// && !g_file_running)
-            //g_file_running = true;
-            //this->initialize_graphics();
-            
-            
-        //}
-        /*
-        if(!g_filename.empty() && !g_file_running){
-            audio_play_done = initialize_audio();
-            //g_filename = new char[MAX_PATH_BYTES];
-            show_display = true;
-         g_running = FALSE;
-         g_play = FALSE;
-         g_filename = "";
-         g_file_running = FALSE;
-         samplesRead = 0;
-         g_sf = NULL;
-        }*/
         
-        if(!g_filename.empty() && g_file_running){
-            this->displayFunc();
-            show_display = g_running;
-        }
         glfwPollEvents();
         glfwSwapBuffers(ws->window);
     }
@@ -594,7 +572,7 @@ void VirtuosoReality::showUI(){
             
             string str(musicPath);
             g_filename = str;
-            std::cout << musicPath << " : " << g_filename << std::endl;
+            std::cout << musicPath << " : " << g_filename <<  " : " << g_filename.empty() << std::endl;
             browseButtonPressed = !browseButtonPressed;
             show_fchooser_window = !show_fchooser_window;
             

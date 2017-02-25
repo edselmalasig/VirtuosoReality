@@ -17,7 +17,7 @@ LIBAUDIODECODER=./lib-macOS/libaudiodecoder/
 PORTAUDIO=./lib-macOS/portaudio/
 SRC=./src/
 
-CFLAGS=-D__MACOSX_CORE__ $(INCLUDES) -O3 -c
+CFLAGS=-D__MACOSX_CORE__ -Dusleep1 $(INCLUDES) -O3 -c
 
 LIBS= -L $(GLEW_DIR)/lib/ -lglew -L $(GLFW3_DIR)/build/src -lglfw3 -L $(LIBAUDIODECODER)/ -laudiodecoder -L $(PORTAUDIO)/build/ -lportaudio
 

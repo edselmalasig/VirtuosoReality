@@ -17,8 +17,8 @@
 #include <process.h>
 #endif
 // usleep
-#ifndef usleep
-#define usleep(x) Sleep( (x/1000 <= 0 ? 1 : x/1000) )
+#ifndef usleep1
+#define usleep(x) //Sleep( (x/1000 <= 0 ? 1 : x/1000) )
 #else
 #include <unistd.h>
 #endif
