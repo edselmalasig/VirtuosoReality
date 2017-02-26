@@ -168,7 +168,7 @@ VirtuosoReality::VirtuosoReality(int argc, char ** argv){
 int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigned long numFrames,
                         const PaStreamCallbackTimeInfo* timeinfo, PaStreamCallbackFlags statusFlags, void * userData )
 {
-    g_sf = static_cast<AudioDecoder *>(userData);
+    AudioDecoder * pg_sf = static_cast<AudioDecoder *>(userData);
     // Play it safe when debugging and coding, protect your ears by clearing
     // the output buffer.
     memset(outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(float));
@@ -176,19 +176,19 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     int temp;
     out_numframes = numFrames;
     if (b_seek){
-        temp = g_position + g_sf->positionInSamples()+1;
-        g_sf->seek(temp);
+        temp = g_position + pg_sf->positionInSamples()+1;
+        pg_sf->seek(temp);
         samplesRead = temp;
     }
     else if (g_position < 0){
         g_position = 0;
         temp = g_position;
-        g_sf->seek(temp);
+        pg_sf->seek(temp);
         samplesRead = temp;
     }
     else{
-        temp = g_sf->positionInSamples();
-        g_sf->seek(temp);
+        temp = pg_sf->positionInSamples();
+        pg_sf->seek(temp);
     }
     
     // Decode the number of samples that PortAudio said it needs to send to the
@@ -209,7 +209,7 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     {
         
         // set playback position to begin
-        g_sf->seek( 0 );
+        pg_sf->seek( 0 );
         g_wf_index = 0;
         g_wf = 0;
         g_starting = 1;
@@ -228,10 +228,10 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
         
     }
     
-    samplesRead += g_sf->read(numFrames * NUM_CHANNELS,
-                                 static_cast<SAMPLE*>(g_stereo_buffer));
+    samplesRead += pg_sf->read(numFrames * NUM_CHANNELS,
+                                 static_cast<SAMPLE*>(outputBuffer));
     
-    if( g_sf->channels() == 2 )
+    if( pg_sf->channels() == 2 )
     {
         // convert stereo to mono
         for( int i = 0; i < numFrames; i++)
@@ -269,15 +269,15 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     g_buffer_count_a++;
     
     // done...
-    //std::cout << "samplesRead : numSamples" << " " << samplesRead << " : " << g_sf->numSamples() << std::endl;
-    if( samplesRead >= g_sf->numSamples() ){
+    std::cout << "samplesRead : numSamples" << " " << samplesRead << " : " << pg_sf->numSamples() << std::endl;
+    if( samplesRead >= pg_sf->numSamples() ){
         // done...
         g_running = FALSE;
         g_play = FALSE;
         g_filename = "";
         g_file_running = FALSE;
         samplesRead = 0;
-        g_sf = NULL;
+        pg_sf = NULL;
         
         // zero
         memset( g_audio_buffer, 0, numFrames * sizeof(SAMPLE) );
@@ -292,11 +292,11 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
         else
             memset( outputBuffer, 0, 2 * numFrames * sizeof(SAMPLE) );
         
-        if( Pa_StopStream( g_sf ) != paNoError ){
+        if( Pa_StopStream( pg_sf ) != paNoError ){
             std::cerr << "Failed to stop stream." << std::endl;
             
         }
-        if (Pa_CloseStream(g_sf) != paNoError){
+        if (Pa_CloseStream(pg_sf) != paNoError){
             std::cerr << "Failed to close stream." << std::endl;
         }
         if(Pa_Terminate() != paNoError){
@@ -447,8 +447,9 @@ void VirtuosoReality::init(int argc, char ** argv){
                 fprintf( stderr, "[Virtuoso Reality]: unrecognized option '%s'...\n", argv[i] );
                 usage();
             }
-
-            //g_filename = argv[1];
+            string str(argv[1]);
+            g_filename = str;
+            
             g_file_running = false;
         }
         else
@@ -459,8 +460,10 @@ void VirtuosoReality::init(int argc, char ** argv){
                 usage();
             }
 
+            string str(argv[1]);
+            g_filename = str;
+
             g_file_running = false;
-            
             g_sndout = 2;
             g_starting = 1;
         }
@@ -480,9 +483,7 @@ void VirtuosoReality::init(int argc, char ** argv){
 }
 
 void VirtuosoReality::run(){
-    std::cout << "run" << std::endl;
-    //this->initialize_audio();
-
+    
     while(g_running){
         this->avrLoop();
     }
@@ -508,6 +509,20 @@ void VirtuosoReality::avrLoop(){
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         glfwPollEvents();
         //this->displayFunc();
+        #ifdef _WIN32
+        
+            this->showUI();
+            ImGui::Render();
+            if(!audio_play)
+                audio_play = this->initialize_audio();
+            
+            if(audio_play)
+                this->displayFunc();
+            
+            glfwPollEvents();
+            glfwSwapBuffers(ws->window);
+            continue;
+        #endif
         if(showui){
             this->showUI();
             ImGui::Render();
@@ -768,6 +783,61 @@ void VirtuosoReality::help()
 //-----------------------------------------------------------------------------
 void VirtuosoReality::probe()
 {
+    int     i, numDevices, defaultDisplayed;
+    const   PaDeviceInfo *deviceInfo;
+    PaStreamParameters inputParameters, outputParameters;
+    PaError err;
+
+    
+    err = Pa_Initialize();
+    if( err != paNoError )
+    {
+        printf( "ERROR: Pa_Initialize returned 0x%x\n", err );
+        exit;
+    }
+
+    numDevices = Pa_GetDeviceCount();
+    if( numDevices < 0 )
+    {
+        printf( "ERROR: Pa_GetDeviceCount returned 0x%x\n", numDevices );
+        err = numDevices;
+        exit;
+    }
+    
+    printf( "Number of devices = %d\n", numDevices );
+    for( i=0; i<numDevices; i++ )
+    {
+        deviceInfo = Pa_GetDeviceInfo( i );
+        printf( "--------------------------------------- device #%d\n", i );
+                
+    /* Mark global and API specific default devices */
+        defaultDisplayed = 0;
+        if( i == Pa_GetDefaultInputDevice() )
+        {
+            printf( "[ Default Input" );
+            defaultDisplayed = 1;
+        }
+        else if( i == Pa_GetHostApiInfo( deviceInfo->hostApi )->defaultInputDevice )
+        {
+            const PaHostApiInfo *hostInfo = Pa_GetHostApiInfo( deviceInfo->hostApi );
+            printf( "[ Default %s Input", hostInfo->name );
+            defaultDisplayed = 1;
+        }
+        
+        if( i == Pa_GetDefaultOutputDevice() )
+        {
+            printf( (defaultDisplayed ? "," : "[") );
+            printf( " Default Output" );
+            defaultDisplayed = 1;
+        }
+        else if( i == Pa_GetHostApiInfo( deviceInfo->hostApi )->defaultOutputDevice )
+        {
+            const PaHostApiInfo *hostInfo = Pa_GetHostApiInfo( deviceInfo->hostApi );
+            printf( (defaultDisplayed ? "," : "[") );                
+            printf( " Default %s Output", hostInfo->name );
+            defaultDisplayed = 1;
+        }
+    }
     
 }
 
@@ -822,19 +892,16 @@ bool VirtuosoReality::initialize_audio( )
     PaStreamParameters iParams, oParams;
     
     
-    // Initialize the PortAudio library.
-    if (Pa_Initialize() != paNoError) {
-        std::cout << "Failed to initialize audio." << std::endl;
-        return false;
-    };
+    
     
     // read from file
     if( !g_filename.empty() )
     {
         fprintf( stderr, "[Virtuoso Reality]: opening %s...\n", g_filename.c_str() );
         // attempt to open file
-        g_sf = new AudioDecoder(g_filename);
-        if (g_sf->open() != AUDIODECODER_OK)
+       g_sf = new AudioDecoder(g_filename);
+
+       if (g_sf->open() != AUDIODECODER_OK)
         {
             std::cout << "Failed to open " << g_filename << std::endl;
             return false;
@@ -846,7 +913,7 @@ bool VirtuosoReality::initialize_audio( )
         // set srate from the WvIn
         fprintf( stderr, "[Virtuoso Reality]: setting sample rate to %d\n", g_srate );
         g_srate = g_sf->sampleRate();
-        PaStream * g_audio;
+        PaStream * g_audio = NULL;
         
         // check for audio devices
         devices = Pa_GetDeviceCount();
@@ -859,19 +926,19 @@ bool VirtuosoReality::initialize_audio( )
         }
         
         // set to default
-        if (g_audioInputDevice < 0) g_audioInputDevice = Pa_GetDefaultInputDevice();
-        if (g_audioOutputDevice < 0) g_audioOutputDevice = Pa_GetDefaultOutputDevice();
+        //if (g_audioInputDevice < 0) g_audioInputDevice = Pa_GetDefaultInputDevice();
+        //if (g_audioOutputDevice < 0) g_audioOutputDevice = Pa_GetDefaultOutputDevice();
         
         // log
         cout << "[Virtuoso Reality]: opening input device: " << g_audioInputDevice
         << " output device: " << g_audioOutputDevice << "..." << endl;
         
         // set input and output parameters
-        iParams.device = g_audioInputDevice;
-        iParams.channelCount = NUM_CHANNELS;
+        //iParams.device = g_audioInputDevice;
+        //iParams.channelCount = NUM_CHANNELS;
         //iParams.firstChannel = 0;
-        oParams.device = g_audioOutputDevice;
-        oParams.channelCount = NUM_CHANNELS;
+        //oParams.device = g_audioOutputDevice;
+        //oParams.channelCount = NUM_CHANNELS;
         //oParams.firstChannel = 0;
         
         bufferFrames = g_buffer_size;

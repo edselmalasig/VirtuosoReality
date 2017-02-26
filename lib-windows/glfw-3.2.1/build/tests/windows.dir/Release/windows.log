@@ -1,7 +1,0 @@
-﻿  Building Custom Rule C:/Users/edselmalasig/Documents/GitHub/Virtuoso_Reality/lib-windows/glfw-3.2.1/tests/CMakeLists.txt
-  CMake does not need to re-run because C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\tests\CMakeFiles\generate.stamp is up-to-date.
-  windows.c
-  getopt.c
-  glad.c
-  Generating Code...
-  windows.vcxproj -> C:\Users\edselmalasig\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\tests\Release\windows.exe
