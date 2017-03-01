@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\build\CMakeFiles\67bb53956de5be4850fa2403ed3ae168\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2C87482F-53D7-3E68-A58C-447B4044774C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

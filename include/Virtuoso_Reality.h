@@ -44,7 +44,7 @@ public:
     void avrLoop();
     char musicPath[MAX_PATH_BYTES];
     bool browseButtonPressed = false;
-   
+
     bool show_demo_window = false;
     bool show_fchooser_window = false;
     bool show_help_window = false;

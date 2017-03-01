@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_allocation.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_converters.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_cpuload.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_debugprint.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_dither.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_front.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_process.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_ringbuffer.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_stream.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_trace.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\hostapi\skeleton\pa_hostapi_skeleton.c">
+      <Filter>hostapi\skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_hostapis.c">
+      <Filter>os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_util.c">
+      <Filter>os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_waveformat.c">
+      <Filter>os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_wdmks_utils.c">
+      <Filter>os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_coinitialize.c">
+      <Filter>os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_x86_plain_converters.c">
+      <Filter>os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\hostapi\wmme\pa_win_wmme.c">
+      <Filter>hostapi\wmme</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\hostapi\wdmks\pa_win_wdmks.c">
+      <Filter>hostapi\wdmks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_coinitialize.h">
+      <Filter>os\win</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_win_wdmks_utils.h">
+      <Filter>os\win</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\os\win\pa_x86_plain_converters.h">
+      <Filter>os\win</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\build\options_cmake.h">
+      <Filter>cmake_generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include\portaudio.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include\pa_win_wmme.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\include\pa_win_wdmks.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_allocation.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_converters.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_cpuload.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_debugprint.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_dither.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_endianness.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_hostapi.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_memorybarrier.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_process.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_ringbuffer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_stream.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_trace.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_types.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\src\common\pa_util.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\portaudio\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="os\win">
+      <UniqueIdentifier>{237B5496-C4B4-35ED-BBDE-C01C88C2988F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{5F3A6AF5-1FC0-3630-9D8D-E41B0D238C54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hostapi">
+      <UniqueIdentifier>{C9AF9A16-A648-3201-9BCE-B831666BAC46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os">
+      <UniqueIdentifier>{4B35C72C-4D91-3BA9-A35A-57E8CBD03CE5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmake_generated">
+      <UniqueIdentifier>{0301C16C-D294-3C4E-B886-80417DCD3FCC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{EDD79916-AD30-309D-808F-648A6E37FD60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hostapi\skeleton">
+      <UniqueIdentifier>{027C0E8D-98FF-37CA-813C-F32B74AD2695}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hostapi\wmme">
+      <UniqueIdentifier>{1C441938-FEFE-3CB5-8802-142BF77ACB6D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hostapi\wdmks">
+      <UniqueIdentifier>{CAE16D47-CC83-3AE9-92AC-069A9C1B822B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

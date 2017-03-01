@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\tests\tearing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\deps\getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\deps\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\deps\getopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\deps\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\glfw-3.2.1\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E9C54D5C-83B0-3531-AA7F-F177333620A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{174DB3E4-AD48-3F2E-9E71-9C0FDEFC1D4F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

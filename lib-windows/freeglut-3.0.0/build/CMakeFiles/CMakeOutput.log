@@ -1,0 +1,528 @@
+The system is: Windows - 10.0.14393 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:15:50 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\3.7.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\3.7.2\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\3.7.2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.96
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/3.7.2/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:15:58 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\3.7.2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\3.7.2\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\3.7.2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.32
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/3.7.2/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_fc620.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:01 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_fc620.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_fc620.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_fc620.dir\Debug\cmTC_fc620.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_fc620.dir\Debug\cmTC_fc620.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fc620.dir\Debug\\" /Fd"cmTC_fc620.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fc620.dir\Debug\\" /Fd"cmTC_fc620.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  
+  testCCompiler.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_fc620.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_fc620.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_fc620.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_fc620.dir\Debug\testCCompiler.obj
+  cmTC_fc620.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_fc620.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_fc620.dir\Debug\cmTC_fc620.tlog\unsuccessfulbuild".
+  Touching "cmTC_fc620.dir\Debug\cmTC_fc620.tlog\cmTC_fc620.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_fc620.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.87
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_8a2e3.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:03 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_8a2e3.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_8a2e3.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_8a2e3.dir\Debug\cmTC_8a2e3.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_8a2e3.dir\Debug\cmTC_8a2e3.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8a2e3.dir\Debug\\" /Fd"cmTC_8a2e3.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8a2e3.dir\Debug\\" /Fd"cmTC_8a2e3.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_8a2e3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_8a2e3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_8a2e3.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_8a2e3.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_8a2e3.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_8a2e3.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_8a2e3.dir\Debug\cmTC_8a2e3.tlog\unsuccessfulbuild".
+  Touching "cmTC_8a2e3.dir\Debug\cmTC_8a2e3.tlog\cmTC_8a2e3.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_8a2e3.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.23
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_37401.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:05 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_37401.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_37401.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_37401.dir\Debug\cmTC_37401.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_37401.dir\Debug\cmTC_37401.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_37401.dir\Debug\\" /Fd"cmTC_37401.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_37401.dir\Debug\\" /Fd"cmTC_37401.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  
+  testCXXCompiler.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_37401.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_37401.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_37401.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_37401.dir\Debug\testCXXCompiler.obj
+  cmTC_37401.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_37401.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_37401.dir\Debug\cmTC_37401.tlog\unsuccessfulbuild".
+  Touching "cmTC_37401.dir\Debug\cmTC_37401.tlog\cmTC_37401.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_37401.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.16
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_629f6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:06 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_629f6.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_629f6.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_629f6.dir\Debug\cmTC_629f6.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_629f6.dir\Debug\cmTC_629f6.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_629f6.dir\Debug\\" /Fd"cmTC_629f6.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_629f6.dir\Debug\\" /Fd"cmTC_629f6.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_629f6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_629f6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_629f6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_629f6.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_629f6.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_629f6.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_629f6.dir\Debug\cmTC_629f6.tlog\unsuccessfulbuild".
+  Touching "cmTC_629f6.dir\Debug\cmTC_629f6.tlog\cmTC_629f6.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_629f6.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.24
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_ad8fd.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:08 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_ad8fd.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_ad8fd.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_ad8fd.dir\Debug\cmTC_ad8fd.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_ad8fd.dir\Debug\cmTC_ad8fd.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ad8fd.dir\Debug\\" /Fd"cmTC_ad8fd.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\feature_tests.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ad8fd.dir\Debug\\" /Fd"cmTC_ad8fd.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\feature_tests.cxx"
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_ad8fd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_ad8fd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_ad8fd.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ad8fd.dir\Debug\feature_tests.obj
+  cmTC_ad8fd.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_ad8fd.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_ad8fd.dir\Debug\cmTC_ad8fd.tlog\unsuccessfulbuild".
+  Touching "cmTC_ad8fd.dir\Debug\cmTC_ad8fd.tlog\cmTC_ad8fd.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_ad8fd.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.56
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+Determining if files sys/types.h exist passed with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_57583.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:10 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_57583.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_57583.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_57583.dir\Debug\cmTC_57583.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_57583.dir\Debug\cmTC_57583.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_57583.dir\Debug\\" /Fd"cmTC_57583.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_57583.dir\Debug\\" /Fd"cmTC_57583.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  
+  CheckIncludeFiles.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_57583.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_57583.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_57583.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_57583.dir\Debug\CheckIncludeFiles.obj
+  cmTC_57583.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_57583.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_57583.dir\Debug\cmTC_57583.tlog\unsuccessfulbuild".
+  Touching "cmTC_57583.dir\Debug\cmTC_57583.tlog\cmTC_57583.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_57583.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.16
+
+
+Determining if files stdbool.h exist passed with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_24d38.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:14 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_24d38.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_24d38.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_24d38.dir\Debug\cmTC_24d38.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_24d38.dir\Debug\cmTC_24d38.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_24d38.dir\Debug\\" /Fd"cmTC_24d38.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_24d38.dir\Debug\\" /Fd"cmTC_24d38.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  
+  CheckIncludeFiles.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_24d38.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_24d38.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_24d38.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_24d38.dir\Debug\CheckIncludeFiles.obj
+  cmTC_24d38.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_24d38.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_24d38.dir\Debug\cmTC_24d38.tlog\unsuccessfulbuild".
+  Touching "cmTC_24d38.dir\Debug\cmTC_24d38.tlog\cmTC_24d38.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_24d38.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.22
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_bbc46.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:18 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_bbc46.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_bbc46.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_bbc46.dir\Debug\cmTC_bbc46.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_bbc46.dir\Debug\cmTC_bbc46.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bbc46.dir\Debug\\" /Fd"cmTC_bbc46.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bbc46.dir\Debug\\" /Fd"cmTC_bbc46.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  
+  CheckIncludeFiles.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_bbc46.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_bbc46.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_bbc46.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_bbc46.dir\Debug\CheckIncludeFiles.obj
+  cmTC_bbc46.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_bbc46.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_bbc46.dir\Debug\cmTC_bbc46.tlog\unsuccessfulbuild".
+  Touching "cmTC_bbc46.dir\Debug\cmTC_bbc46.tlog\cmTC_bbc46.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_bbc46.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.28
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_ebe4e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:25 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_ebe4e.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_ebe4e.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_ebe4e.dir\Debug\cmTC_ebe4e.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_ebe4e.dir\Debug\cmTC_ebe4e.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ebe4e.dir\Debug\\" /Fd"cmTC_ebe4e.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ebe4e.dir\Debug\\" /Fd"cmTC_ebe4e.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  
+  CheckIncludeFiles.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_ebe4e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_ebe4e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_ebe4e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ebe4e.dir\Debug\CheckIncludeFiles.obj
+  cmTC_ebe4e.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_ebe4e.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_ebe4e.dir\Debug\cmTC_ebe4e.tlog\unsuccessfulbuild".
+  Touching "cmTC_ebe4e.dir\Debug\cmTC_ebe4e.tlog\cmTC_ebe4e.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_ebe4e.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.14
+
+
+Determining if files inttypes.h exist passed with the following output:
+Change Dir: C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_24ba8.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/19/2017 11:16:26 AM.
+Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_24ba8.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_24ba8.dir\Debug\".
+  Creating directory "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_24ba8.dir\Debug\cmTC_24ba8.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_24ba8.dir\Debug\cmTC_24ba8.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_24ba8.dir\Debug\\" /Fd"cmTC_24ba8.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_24ba8.dir\Debug\\" /Fd"cmTC_24ba8.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  
+  CheckIncludeFiles.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_24ba8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_24ba8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/edsel/Documents/GitHub/Virtuoso_Reality/lib-windows/freeglut-3.0.0/build/CMakeFiles/CMakeTmp/Debug/cmTC_24ba8.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_24ba8.dir\Debug\CheckIncludeFiles.obj
+  cmTC_24ba8.vcxproj -> C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\Debug\cmTC_24ba8.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_24ba8.dir\Debug\cmTC_24ba8.tlog\unsuccessfulbuild".
+  Touching "cmTC_24ba8.dir\Debug\cmTC_24ba8.tlog\cmTC_24ba8.lastbuildstate".
+Done Building Project "C:\Users\edsel\Documents\GitHub\Virtuoso_Reality\lib-windows\freeglut-3.0.0\build\CMakeFiles\CMakeTmp\cmTC_24ba8.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.48
+
+

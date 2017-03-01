@@ -168,32 +168,16 @@ VirtuosoReality::VirtuosoReality(int argc, char ** argv){
 int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigned long numFrames,
                         const PaStreamCallbackTimeInfo* timeinfo, PaStreamCallbackFlags statusFlags, void * userData )
 {
-    AudioDecoder * pg_sf = static_cast<AudioDecoder *>(userData);
+    g_sf = static_cast<AudioDecoder *>(userData);
     // Play it safe when debugging and coding, protect your ears by clearing
     // the output buffer.
     memset(outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(float));
     
     int temp;
     out_numframes = numFrames;
-    if (b_seek){
-        temp = g_position + pg_sf->positionInSamples()+1;
-        pg_sf->seek(temp);
-        samplesRead = temp;
-    }
-    else if (g_position < 0){
-        g_position = 0;
-        temp = g_position;
-        pg_sf->seek(temp);
-        samplesRead = temp;
-    }
-    else{
-        temp = pg_sf->positionInSamples();
-        pg_sf->seek(temp);
-    }
-    
+        
     // Decode the number of samples that PortAudio said it needs to send to the
     // soundcard.
-    
     
     g_mutex.lock();
     
@@ -209,7 +193,7 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     {
         
         // set playback position to begin
-        pg_sf->seek( 0 );
+        g_sf->seek( 0 );
         g_wf_index = 0;
         g_wf = 0;
         g_starting = 1;
@@ -228,10 +212,10 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
         
     }
     
-    samplesRead += pg_sf->read(numFrames * NUM_CHANNELS,
+    samplesRead += g_sf->read(numFrames * NUM_CHANNELS,
                                  static_cast<SAMPLE*>(outputBuffer));
     
-    if( pg_sf->channels() == 2 )
+    if( g_sf->channels() == 2 )
     {
         // convert stereo to mono
         for( int i = 0; i < numFrames; i++)
@@ -263,21 +247,21 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     }
     
     // play stereo
-    memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
+    //memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
     
     // count
     g_buffer_count_a++;
     
     // done...
-    std::cout << "samplesRead : numSamples" << " " << samplesRead << " : " << pg_sf->numSamples() << std::endl;
-    if( samplesRead >= pg_sf->numSamples() ){
+    std::cout << "samplesRead : numSamples" << " ---- " << samplesRead << " : " << endl; //pg_sf->numSamples() << std::endl;
+    if( false ){
         // done...
         g_running = FALSE;
         g_play = FALSE;
         g_filename = "";
         g_file_running = FALSE;
         samplesRead = 0;
-        pg_sf = NULL;
+        g_sf = NULL;
         
         // zero
         memset( g_audio_buffer, 0, numFrames * sizeof(SAMPLE) );
@@ -292,11 +276,11 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
         else
             memset( outputBuffer, 0, 2 * numFrames * sizeof(SAMPLE) );
         
-        if( Pa_StopStream( pg_sf ) != paNoError ){
+        if( Pa_StopStream( g_sf ) != paNoError ){
             std::cerr << "Failed to stop stream." << std::endl;
             
         }
-        if (Pa_CloseStream(pg_sf) != paNoError){
+        if (Pa_CloseStream(g_sf) != paNoError){
             std::cerr << "Failed to close stream." << std::endl;
         }
         if(Pa_Terminate() != paNoError){
@@ -490,12 +474,13 @@ void VirtuosoReality::run(){
 }
 
 void VirtuosoReality::avrLoop(){
- 
+  
     int display_w;
     int display_h;
     int show_display = false;
     bool audio_play = false;
     int count;
+    bool bT;
     while( !glfwWindowShouldClose(ws->window) )
     {
         // Set frame time
@@ -509,37 +494,20 @@ void VirtuosoReality::avrLoop(){
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         glfwPollEvents();
         //this->displayFunc();
-        #ifdef _WIN32
         
             this->showUI();
             ImGui::Render();
-            if(!audio_play)
+            if(!audio_play){
                 audio_play = this->initialize_audio();
-            
-            if(audio_play)
+                bT=true;
+            }
+            if(bT)
                 this->displayFunc();
             
             glfwPollEvents();
             glfwSwapBuffers(ws->window);
             continue;
-        #endif
-        if(showui){
-            this->showUI();
-            ImGui::Render();
-            
-            if(g_filename.empty()){
-                glfwPollEvents();
-                glfwSwapBuffers(ws->window);
-                continue;
-            }else if(!audio_play){
-                audio_play = this->initialize_audio();
-                g_file_running = true;
-            }else{
-                this->displayFunc();
-                show_display = g_running;
-            }
-            
-        }
+        
         
         glfwPollEvents();
         glfwSwapBuffers(ws->window);
