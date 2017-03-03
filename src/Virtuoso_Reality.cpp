@@ -190,8 +190,7 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     
     // check for restart
     if( g_restart )
-    {
-        
+    {    
         // set playback position to begin
         g_sf->seek( 0 );
         g_wf_index = 0;
@@ -208,13 +207,12 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
                 memset( g_spectrums[i], 0, sizeof(Pt2D)*SND_FFT_SIZE );
                 g_draw[i] = false;
             }
-        }
-        
+        }        
     }
     
     samplesRead += g_sf->read(numFrames * NUM_CHANNELS,
-                                 static_cast<SAMPLE*>(outputBuffer));
-    
+                                 static_cast<SAMPLE*>(g_stereo_buffer));
+
     if( g_sf->channels() == 2 )
     {
         // convert stereo to mono
@@ -247,13 +245,12 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
     }
     
     // play stereo
-    //memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
+    memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
     
-    // count
     g_buffer_count_a++;
     
     // done...
-    std::cout << "samplesRead : numSamples" << " ---- " << samplesRead << " : " << endl; //pg_sf->numSamples() << std::endl;
+    //std::cout << "samplesRead : numSamples" << " ---- " << samplesRead << " : " << pg_sf->numSamples() << std::endl;
     if( false ){
         // done...
         g_running = FALSE;
@@ -308,7 +305,6 @@ int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigne
      memset( outputBuffer, 0, numFrames * 2 * sizeof(SAMPLE) );
      */
     return paContinue;
-    
 }
 
 
@@ -494,19 +490,22 @@ void VirtuosoReality::avrLoop(){
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         glfwPollEvents();
         //this->displayFunc();
-        
+        if(showui){
             this->showUI();
             ImGui::Render();
-            if(!audio_play){
+
+            if(g_filename.empty()){
+                glfwPollEvents();
+                glfwSwapBuffers(ws->window);
+                continue;
+            }else if(!audio_play){
                 audio_play = this->initialize_audio();
-                bT=true;
-            }
-            if(bT)
+                g_file_running = true;
+            }else{
                 this->displayFunc();
-            
-            glfwPollEvents();
-            glfwSwapBuffers(ws->window);
-            continue;
+                show_display = g_running;
+            }
+        }
         
         
         glfwPollEvents();
@@ -894,8 +893,8 @@ bool VirtuosoReality::initialize_audio( )
         }
         
         // set to default
-        //if (g_audioInputDevice < 0) g_audioInputDevice = Pa_GetDefaultInputDevice();
-        //if (g_audioOutputDevice < 0) g_audioOutputDevice = Pa_GetDefaultOutputDevice();
+        if (g_audioInputDevice < 0) g_audioInputDevice = Pa_GetDefaultInputDevice();
+        if (g_audioOutputDevice < 0) g_audioOutputDevice = Pa_GetDefaultOutputDevice();
         
         // log
         cout << "[Virtuoso Reality]: opening input device: " << g_audioInputDevice
@@ -972,15 +971,8 @@ bool VirtuosoReality::initialize_audio( )
             memset( g_waveforms[i], 0, g_buffer_size * 2 * sizeof(SAMPLE) );
         }
     }
-    //delete g_sf;
     return true;
-    
-    
 }
-
-
-
-
 
 //-----------------------------------------------------------------------------
 // Name: initialize_analysis( )
@@ -1013,7 +1005,7 @@ void VirtuosoReality::initialize_analysis( )
 //-----------------------------------------------------------------------------
 // Name: initialize_graphics( )
 // Desc: sets initial OpenGL states and initializes any application data
-//-----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 void VirtuosoReality::initialize_graphics()
 {
     // set the GL clear color - use when the color buffer is cleared
@@ -1325,9 +1317,7 @@ void VirtuosoReality::keyboardFunc( GLFWwindow * window, int key, int scancode, 
     
     doMovement(key);
     reshapeFunc(ws->g_width,ws->g_height);
-    
-    //glutPostRedisplay( );
-    
+
 }
 
 void VirtuosoReality::doMovement(int key){
@@ -1347,6 +1337,7 @@ void VirtuosoReality::doMovement(int key){
 //-----------------------------------------------------------------------------
 GLFWcursorposfun VirtuosoReality::mouseFunc(double xpos, double ypos)
 {
+    glfwGetCursorPos(ws->window, &xpos, &ypos);
     if(ws->firstMouse)
     {
         ws->lastX = xpos;
@@ -1362,9 +1353,8 @@ GLFWcursorposfun VirtuosoReality::mouseFunc(double xpos, double ypos)
     
     ws->camera->ProcessMouseMovement(xoffset, yoffset);
     reshapeFunc(ws->g_width, ws->g_height);
-    //SDL_GL_SwapWindow(window);
-    
-    return 0;
+
+    return (GLFWcursorposfun)1;
     
 }
 
@@ -1953,6 +1943,6 @@ void VirtuosoReality::extract_buffer( )
     
     // file reading stuff
     g_buffer_count_b++;
-    if( !g_filename.empty() && !g_file_running && g_buffer_count_a == g_buffer_count_b )
+    if( g_filename.empty() && !g_file_running && g_buffer_count_a == g_buffer_count_b )
         g_running = FALSE;
 }

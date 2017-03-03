@@ -48,7 +48,11 @@
 //          (ImGUI) Ocornut
 // date:    Spring 2017 - updated for macOS
 //	    Linux and Windows build files will be added soon
-//
+//      3/1/20017
+//      Windows Build command has been added.
+//      Links to the libraries will be posted dont worry its the source files
+//      of the libraries.
+//      
 // usage: (type 'h' while running or see list of command line arguments)
 //-----------------------------------------------------------------------------
 
