@@ -159,161 +159,13 @@ VirtuosoReality::VirtuosoReality(int argc, char ** argv){
     this->init(argc, argv);
 }
 
-//-----------------------------------------------------------------------------
-// name: cb()
-// desc: audio callback
-//-----------------------------------------------------------------------------
-//int cb( char * buffer, int buffer_size, void * user_data )
-
-int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigned long numFrames,
-                        const PaStreamCallbackTimeInfo* timeinfo, PaStreamCallbackFlags statusFlags, void * userData )
-{
-    g_sf = static_cast<AudioDecoder *>(userData);
-    // Play it safe when debugging and coding, protect your ears by clearing
-    // the output buffer.
-    memset(outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(float));
-    
-    int temp;
-    out_numframes = numFrames;
-        
-    // Decode the number of samples that PortAudio said it needs to send to the
-    // soundcard.
-    
-    g_mutex.lock();
-    
-    // freeze frame
-    if( g_freeze ) {
-        memset( outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(SAMPLE) );
-        g_ready = TRUE;
-        return 0;
-    }
-    
-    // check for restart
-    if( g_restart )
-    {    
-        // set playback position to begin
-        g_sf->seek( 0 );
-        g_wf_index = 0;
-        g_wf = 0;
-        g_starting = 1;
-        g_restart = FALSE;
-        // clear waveforms and waterfall and drawing booleans
-        for( GLint i = 0; i < g_wf_delay || i < g_depth; i++ )
-        {
-            if( i < g_wf_delay )
-                memset( g_waveforms[i], 0, g_buffer_size * 2 * sizeof(SAMPLE) );
-            if( i < g_depth )
-            {
-                memset( g_spectrums[i], 0, sizeof(Pt2D)*SND_FFT_SIZE );
-                g_draw[i] = false;
-            }
-        }        
-    }
-    
-    samplesRead += g_sf->read(numFrames * NUM_CHANNELS,
-                                 static_cast<SAMPLE*>(g_stereo_buffer));
-
-    if( g_sf->channels() == 2 )
-    {
-        // convert stereo to mono
-        for( int i = 0; i < numFrames; i++)
-        {
-            g_audio_buffer[i] = g_stereo_buffer[i*2] + g_stereo_buffer[i*2+1];
-            g_audio_buffer[i] /= 2.0f;
-        }
-    }
-    else
-    {
-        // actually mono
-        memcpy( g_audio_buffer, g_stereo_buffer, numFrames * sizeof(SAMPLE) );
-        // convert mono to stereo
-        for( int i = 0; i < numFrames; i++ )
-        {
-            g_stereo_buffer[i*2] = g_stereo_buffer[i*2+1] = g_audio_buffer[i];
-        }
-    }
-    
-    // time-domain waterfall delay
-    if( g_waveforms != NULL )
-    {
-        // put current buffer in time-domain waterfall
-        memcpy( g_waveforms[g_wf_index], g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
-        // incrment index (this is also the index to copy out of)
-        g_wf_index = (GLint)((g_wf_index + 1.0f)) % (GLint)(g_wf_delay);
-        // copy delayed buffer out of time-domain waterfall
-        memcpy( g_stereo_buffer, g_waveforms[g_wf_index], numFrames * 2 * sizeof(SAMPLE) );
-    }
-    
-    // play stereo
-    memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
-    
-    g_buffer_count_a++;
-    
-    // done...
-    //std::cout << "samplesRead : numSamples" << " ---- " << samplesRead << " : " << pg_sf->numSamples() << std::endl;
-    if( false ){
-        // done...
-        g_running = FALSE;
-        g_play = FALSE;
-        g_filename = "";
-        g_file_running = FALSE;
-        samplesRead = 0;
-        g_sf = NULL;
-        
-        // zero
-        memset( g_audio_buffer, 0, numFrames * sizeof(SAMPLE) );
-        // copy remaining delayed waveform buffers one by one
-        if( g_wf_delay )
-        {
-            memset( g_waveforms[g_wf_index], 0, numFrames * 2 * sizeof(SAMPLE) );
-            g_wf_index = (GLint)((g_wf_index + 1.0f)) % (GLint)(g_wf_delay);
-            memcpy( g_stereo_buffer, g_waveforms[g_wf_index], numFrames * 2 * sizeof(SAMPLE) );
-            memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
-        }
-        else
-            memset( outputBuffer, 0, 2 * numFrames * sizeof(SAMPLE) );
-        
-        if( Pa_StopStream( g_sf ) != paNoError ){
-            std::cerr << "Failed to stop stream." << std::endl;
-            
-        }
-        if (Pa_CloseStream(g_sf) != paNoError){
-            std::cerr << "Failed to close stream." << std::endl;
-        }
-        if(Pa_Terminate() != paNoError){
-            std::cerr << "Failed to terminate stream." << std::endl;
-        }else
-            std::cerr << "Stream terminated." << std::endl;
-        
-        b_seek = false;
-        g_ready = TRUE;
-        g_mutex.unlock();
-        delete g_sf;
-        std::cout << "***************\n***************\n***************\n paComplete: " << paComplete << std::endl;
-        return 3;
-    }
-    
-    
-    b_seek = false;
-    // set flag
-    g_ready = TRUE;
-    // unlock
-    g_mutex.unlock();
-    /*
-     // mute the real-time audio
-     if( g_mute )
-     memset( outputBuffer, 0, numFrames * 2 * sizeof(SAMPLE) );
-     */
-    return paContinue;
-}
-
-
 void VirtuosoReality::init(int argc, char ** argv){
     
     this->help();
     this->probe();
     GLboolean set_play = TRUE;
     // command line arguments
+
     for( int i = 1; i < argc; i++ )
     {
         if( !strncmp( argv[i], "-", 1 ) )
@@ -440,7 +292,7 @@ void VirtuosoReality::init(int argc, char ** argv){
                 usage();
             }
 
-            string str(argv[1]);
+			string str(argv[1]);
             g_filename = str;
 
             g_file_running = false;
@@ -449,14 +301,20 @@ void VirtuosoReality::init(int argc, char ** argv){
         }
     }
     glutInit( &argc, argv );
+    
     ImGui_ImplGlfw_Init(ws->window, true);
+    ImGuiIO& io = ImGui::GetIO();
+    //io.Fonts->AddFontDefault();
+    const char * font_file = "lib-windows\\imgui\\extra_fonts\\Roboto-Medium.ttf";
+    io.Fonts->AddFontFromFileTTF(font_file, 16.5f);
+
     glfwMakeContextCurrent(ws->window);
     glfwSetCursorPosCallback( ws->window, (GLFWcursorposfun)mouseFunc );
     
     glfwSetKeyCallback(ws->window, (GLFWkeyfun)keyboardFunc);
     glfwSwapInterval(1);
     
-    ImGui::SetupImGuiStyle(false, 0.1f);
+    ImGui::SetupImGuiStyle(false, 1.0f);
     this->initialize_analysis();
     this->initialize_graphics();
     this->run();
@@ -477,6 +335,7 @@ void VirtuosoReality::avrLoop(){
     bool audio_play = false;
     int count;
     bool bT;
+    audio_play = this->initialize_audio();
     while( !glfwWindowShouldClose(ws->window) )
     {
         // Set frame time
@@ -489,11 +348,12 @@ void VirtuosoReality::avrLoop(){
         glViewport(0, 0, display_w, display_h);
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         glfwPollEvents();
-        //this->displayFunc();
-        if(showui){
-            this->showUI();
-            ImGui::Render();
-
+        
+        //if(showui)
+		{
+            
+			this->displayFunc();
+			/*
             if(g_filename.empty()){
                 glfwPollEvents();
                 glfwSwapBuffers(ws->window);
@@ -505,8 +365,11 @@ void VirtuosoReality::avrLoop(){
                 this->displayFunc();
                 show_display = g_running;
             }
-        }
-        
+			*/
+            this->showUI();
+            ImGui::Render();
+			
+        }        
         
         glfwPollEvents();
         glfwSwapBuffers(ws->window);
@@ -515,6 +378,8 @@ void VirtuosoReality::avrLoop(){
 
 void VirtuosoReality::showUI(){
     ImGui_ImplGlfw_NewFrame();
+
+    
     
     // 1. Show a simple window
     // Tip: if we don't call ImGui::Begin()/ImGui::End() the widgets appears in a window automatically called "Debug"
@@ -531,7 +396,8 @@ void VirtuosoReality::showUI(){
     }
     
     // 2. Show another simple window, this time using an explicit Begin/End pair
-    if (show_fchooser_window)
+    
+	if (show_fchooser_window)
     {
         static ImGuiFs::Dialog dlg;
         ImGui::SetNextWindowSize(ImVec2(200,100), ImGuiSetCond_FirstUseEver);
@@ -559,16 +425,6 @@ void VirtuosoReality::showUI(){
             show_fchooser_window = !show_fchooser_window;
             
         }
-        
-        // If you want to copy the (valid) returned path somewhere, you can use something like:
-        /*
-        char myPath[ImGuiFs::MAX_PATH_BYTES];
-        if (strlen(dlg.getChosenPath())>0) {
-            strcpy(g_filename,dlg.getChosenPath());
-            
-            std::cerr << g_filename << std::endl;
-        }
-         */
         ImGui::End();
     }
     
@@ -838,6 +694,146 @@ void VirtuosoReality::usage()
     fprintf( stderr, "\n" );
 }
 
+//-----------------------------------------------------------------------------
+// name: cb()
+// desc: audio callback
+//-----------------------------------------------------------------------------
+//int cb( char * buffer, int buffer_size, void * user_data )
+
+int VirtuosoReality::cb( const void * inputBuffer, void * outputBuffer,  unsigned long numFrames,
+                        const PaStreamCallbackTimeInfo* timeinfo, PaStreamCallbackFlags statusFlags, void * userData )
+{
+    //g_sf = static_cast<AudioDecoder *>(userData);
+    // Play it safe when debugging and coding, protect your ears by clearing
+    // the output buffer.
+    memset(outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(float));
+    
+    int temp;
+    out_numframes = numFrames;
+        
+    // Decode the number of samples that PortAudio said it needs to send to the
+    // soundcard.
+    
+    g_mutex.lock();
+    
+    // freeze frame
+    if( g_freeze ) {
+        memset( outputBuffer, 0, numFrames * NUM_CHANNELS * sizeof(SAMPLE) );
+        g_ready = TRUE;
+        return 0;
+    }
+    
+    // check for restart
+    if( g_restart )
+    {    
+        // set playback position to begin
+        //g_sf->seek( 0 );
+        g_wf_index = 0;
+        g_wf = 0;
+        g_starting = 1;
+        g_restart = FALSE;
+        // clear waveforms and waterfall and drawing booleans
+        for( GLint i = 0; i < g_wf_delay || i < g_depth; i++ )
+        {
+            if( i < g_wf_delay )
+                memset( g_waveforms[i], 0, g_buffer_size * 2 * sizeof(SAMPLE) );
+            if( i < g_depth )
+            {
+                memset( g_spectrums[i], 0, sizeof(Pt2D)*SND_FFT_SIZE );
+                g_draw[i] = false;
+            }
+        }        
+    }
+    
+    samplesRead += g_sf->read(numFrames * NUM_CHANNELS,
+                                 static_cast<SAMPLE*>(g_stereo_buffer));
+
+    if( g_sf->channels() == 2 )
+    {
+        // convert stereo to mono
+        for( int i = 0; i < numFrames; i++)
+        {
+            g_audio_buffer[i] = g_stereo_buffer[i*2] + g_stereo_buffer[i*2+1];
+            g_audio_buffer[i] /= 2.0f;
+        }
+    }
+    else
+    {
+        // actually mono
+        memcpy( g_audio_buffer, g_stereo_buffer, numFrames * sizeof(SAMPLE) );
+        // convert mono to stereo
+        for( int i = 0; i < numFrames; i++ )
+        {
+            g_stereo_buffer[i*2] = g_stereo_buffer[i*2+1] = g_audio_buffer[i];
+        }
+    }
+    
+    // time-domain waterfall delay
+    if( g_waveforms != NULL )
+    {
+        // put current buffer in time-domain waterfall
+        memcpy( g_waveforms[g_wf_index], g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
+        // incrment index (this is also the index to copy out of)
+        g_wf_index = (GLint)((g_wf_index + 1.0f)) % (GLint)(g_wf_delay);
+        // copy delayed buffer out of time-domain waterfall
+        memcpy( g_stereo_buffer, g_waveforms[g_wf_index], numFrames * 2 * sizeof(SAMPLE) );
+    }
+    
+    // play stereo
+    memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
+    
+    g_buffer_count_a++;
+    
+    // done...
+    //std::cout << "samplesRead : numSamples" << " ---- " << samplesRead << " : " << pg_sf->numSamples() << std::endl;
+    if( false ){
+        // done...
+        g_running = FALSE;
+        g_play = FALSE;
+        g_filename = "";
+        g_file_running = FALSE;
+        samplesRead = 0;
+        g_sf = NULL;
+        
+        // zero
+        memset( g_audio_buffer, 0, numFrames * sizeof(SAMPLE) );
+        // copy remaining delayed waveform buffers one by one
+        if( g_wf_delay )
+        {
+            memset( g_waveforms[g_wf_index], 0, numFrames * 2 * sizeof(SAMPLE) );
+            g_wf_index = (GLint)((g_wf_index + 1.0f)) % (GLint)(g_wf_delay);
+            memcpy( g_stereo_buffer, g_waveforms[g_wf_index], numFrames * 2 * sizeof(SAMPLE) );
+            memcpy( outputBuffer, g_stereo_buffer, numFrames * 2 * sizeof(SAMPLE) );
+        }
+        else
+            memset( outputBuffer, 0, 2 * numFrames * sizeof(SAMPLE) );
+
+        if(Pa_Terminate() != paNoError){
+            std::cerr << "Failed to terminate stream." << std::endl;
+        }else
+            std::cerr << "Stream terminated." << std::endl;
+        
+        b_seek = false;
+        g_ready = TRUE;
+        g_mutex.unlock();
+        //delete g_sf;
+        std::cout << "***************\n***************\n***************\n paComplete: " << paComplete << std::endl;
+        return 3;
+    }
+    
+    
+    b_seek = false;
+    // set flag
+    g_ready = TRUE;
+    // unlock
+    g_mutex.unlock();
+    
+     // mute the real-time audio
+     if( g_mute )
+     memset( outputBuffer, 0, numFrames * 2 * sizeof(SAMPLE) );
+     
+    return paContinue;
+}
 
 
 //-----------------------------------------------------------------------------
@@ -901,12 +897,10 @@ bool VirtuosoReality::initialize_audio( )
         << " output device: " << g_audioOutputDevice << "..." << endl;
         
         // set input and output parameters
-        //iParams.device = g_audioInputDevice;
-        //iParams.channelCount = NUM_CHANNELS;
-        //iParams.firstChannel = 0;
-        //oParams.device = g_audioOutputDevice;
-        //oParams.channelCount = NUM_CHANNELS;
-        //oParams.firstChannel = 0;
+        iParams.device = g_audioInputDevice;
+        iParams.channelCount = 1;
+        oParams.device = g_audioOutputDevice;
+        oParams.channelCount = NUM_CHANNELS;
         
         bufferFrames = g_buffer_size;
         bufferBytes = 0;
@@ -917,8 +911,8 @@ bool VirtuosoReality::initialize_audio( )
         if (Pa_OpenDefaultStream(&g_audio,
                                  0, // No input channels
                                  2, // 2 output channel
-                                 paFloat32, // Sample format (see PaSampleFormat)
-                                 44100, // Sample Rate
+                                 paFloat32, // Sample Rate
+                                 44100,
                                  SND_BUFFER_SIZE,  // Frames per buffer
                                  &cb,
                                  static_cast<void*>(g_sf)) != paNoError)
@@ -929,8 +923,7 @@ bool VirtuosoReality::initialize_audio( )
         
         // let RtAudio print messages to stderr.
         //g_audio->showWarnings( true );
-        
-        
+
         // Start the audio stream. PortAudio will then start calling our callback function
         // every time the soundcard needs audio.
         // Note that this is non-blocking by default!
@@ -1534,7 +1527,7 @@ void VirtuosoReality::displayFunc( )
     memcpy( buffer, g_audio_buffer, g_buffer_size * sizeof(SAMPLE) );
     
     // some flag (hand off to audio cb thread)
-    g_ready = FALSE;
+    g_ready = true;
     
     // unlock
     g_mutex.unlock();
