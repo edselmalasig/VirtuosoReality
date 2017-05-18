@@ -279,10 +279,8 @@ void VirtuosoReality::init(int argc, char ** argv){
                 fprintf( stderr, "[Virtuoso Reality]: unrecognized option '%s'...\n", argv[i] );
                 usage();
             }
-            string str(argv[1]);
-            g_filename = str;
             
-            g_file_running = false;
+            
         }
         else
         {
@@ -291,22 +289,19 @@ void VirtuosoReality::init(int argc, char ** argv){
                 fprintf( stderr, "[Virtuoso Reality]: multiple filenames specified...\n" );
                 usage();
             }
-
-			string str(argv[1]);
+            string str(argv[1]);
             g_filename = str;
-
             g_file_running = false;
             g_sndout = 2;
             g_starting = 1;
         }
     }
-    glutInit( &argc, argv );
-    
+    glutInit(&argc, argv);
     ImGui_ImplGlfw_Init(ws->window, true);
     ImGuiIO& io = ImGui::GetIO();
-    //io.Fonts->AddFontDefault();
-    const char * font_file = "lib-windows\\imgui\\extra_fonts\\Roboto-Medium.ttf";
-    io.Fonts->AddFontFromFileTTF(font_file, 16.5f);
+    io.Fonts->AddFontDefault();
+    //const char * font_file = "lib-windows\\imgui\\extra_fonts\\Roboto-Medium.ttf";
+    //io.Fonts->AddFontFromFileTTF(font_file, 16.5f);
 
     glfwMakeContextCurrent(ws->window);
     glfwSetCursorPosCallback( ws->window, (GLFWcursorposfun)mouseFunc );
@@ -317,7 +312,7 @@ void VirtuosoReality::init(int argc, char ** argv){
     ImGui::SetupImGuiStyle(false, 1.0f);
     this->initialize_analysis();
     this->initialize_graphics();
-    this->run();
+    this->avrLoop();
 }
 
 void VirtuosoReality::run(){
@@ -328,17 +323,17 @@ void VirtuosoReality::run(){
 }
 
 void VirtuosoReality::avrLoop(){
-  
     int display_w;
     int display_h;
     int show_display = false;
     bool audio_play = false;
     int count;
     bool bT;
-    audio_play = this->initialize_audio();
+    //audio_play = this->initialize_audio();
     while( !glfwWindowShouldClose(ws->window) )
     {
         // Set frame time
+        std::cout << g_filename << std::endl;
         
         GLfloat currentFrame = (GLfloat) glfwGetTime();
         ws->deltaTime = currentFrame - ws->lastFrame;
@@ -350,36 +345,41 @@ void VirtuosoReality::avrLoop(){
         glfwPollEvents();
         
         //if(showui)
-		{
-            
-			this->displayFunc();
-			/*
-            if(g_filename.empty()){
-                glfwPollEvents();
-                glfwSwapBuffers(ws->window);
-                continue;
-            }else if(!audio_play){
+		//{
+		
+            if(g_filename.empty() || !audio_play){
                 audio_play = this->initialize_audio();
                 g_file_running = true;
-            }else{
+            }else if(audio_play){
                 this->displayFunc();
                 show_display = g_running;
             }
-			*/
+			
             this->showUI();
             ImGui::Render();
-			
-        }        
+		
+        //}
         
         glfwPollEvents();
         glfwSwapBuffers(ws->window);
     }
 }
 
+std::string VirtuosoReality::fixPath(std::string str){
+    std::string tmpStr;
+    for(int i = 0; i < str.length(); i++){
+        if(str.at(i) != ' '){
+            tmpStr = tmpStr + str.at(i);
+        }
+        if (str.at(i) == ' '){
+            tmpStr.append("\\ ");
+        }
+    }
+    return tmpStr;
+}
+
 void VirtuosoReality::showUI(){
     ImGui_ImplGlfw_NewFrame();
-
-    
     
     // 1. Show a simple window
     // Tip: if we don't call ImGui::Begin()/ImGui::End() the widgets appears in a window automatically called "Debug"
@@ -419,7 +419,7 @@ void VirtuosoReality::showUI(){
             ImGui::Text("Chosen file: \"%s\"",dlg.getChosenPath());
             
             string str(musicPath);
-            g_filename = str;
+            g_filename = std::string(str); //std::string(fixPath(str));
             std::cout << musicPath << " : " << g_filename <<  " : " << g_filename.empty() << std::endl;
             browseButtonPressed = !browseButtonPressed;
             show_fchooser_window = !show_fchooser_window;
@@ -643,21 +643,21 @@ void VirtuosoReality::probe()
         else if( i == Pa_GetHostApiInfo( deviceInfo->hostApi )->defaultInputDevice )
         {
             const PaHostApiInfo *hostInfo = Pa_GetHostApiInfo( deviceInfo->hostApi );
-            printf( "[ Default %s Input", hostInfo->name );
+            printf( "[ Default %s Input ", hostInfo->name );
             defaultDisplayed = 1;
         }
         
         if( i == Pa_GetDefaultOutputDevice() )
         {
             printf( (defaultDisplayed ? "," : "[") );
-            printf( " Default Output" );
+            printf( " Default Output " );
             defaultDisplayed = 1;
         }
         else if( i == Pa_GetHostApiInfo( deviceInfo->hostApi )->defaultOutputDevice )
         {
             const PaHostApiInfo *hostInfo = Pa_GetHostApiInfo( deviceInfo->hostApi );
             printf( (defaultDisplayed ? "," : "[") );                
-            printf( " Default %s Output", hostInfo->name );
+            printf( " Default %s Output ", hostInfo->name );
             defaultDisplayed = 1;
         }
     }
@@ -687,7 +687,7 @@ void VirtuosoReality::usage()
     fprintf( stderr, "example:\n" );
     fprintf( stderr, "    Virtuoso Reality --fullscreen:ON --inputDevice:1 --spacing:.05\n" );
     fprintf( stderr, "\n" );
-    probe();
+    //probe();
     fprintf( stderr, "\n" );
     fprintf( stderr, "Virtuoso Reality version: 1.4\n" );
     fprintf( stderr, "    http://www.xdlogic.com/\n" );
@@ -854,8 +854,13 @@ bool VirtuosoReality::initialize_audio( )
     
     PaStreamParameters iParams, oParams;
     
+    //make sound
     
-    
+    if( g_filename.empty() )
+    {
+        cout << " no file to play." << endl;
+        return false;
+    }
     
     // read from file
     if( !g_filename.empty() )
@@ -939,13 +944,6 @@ bool VirtuosoReality::initialize_audio( )
     {
         // no time-domain waterfall delay!
         g_wf_delay = 0;
-    }
-    
-    //make sound
-    if( g_filename.empty() )
-    {
-        cout << "no file to play." << endl;
-        return false;
     }
     
     

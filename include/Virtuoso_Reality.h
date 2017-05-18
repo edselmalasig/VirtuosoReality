@@ -37,7 +37,8 @@ public:
     static SAMPLE g_stereo_buffer[SND_BUFFER_SIZE*2]; // current stereo buffer (now
     static GLint g_buffer_size; // = SND_BUFFER_SIZE;
     static int samplesRead;
-    static int out_numframes;  
+    static int out_numframes;
+    std::string fixPath(std::string str);
     void showUI();
     void init(int argc, char ** argv);
     void run();
